@@ -28,9 +28,9 @@ My work sits at the intersection of frontend precision and full-stack thinking. 
 
     // Trang Home: 3 điểm mạnh
     strengths: [
-        { icon: '⚡', title: 'Performance First', desc: 'Optimizing for speed and efficiency across all devices.' },
-        { icon: '🎨', title: 'UI/UX Centric', desc: 'Creating intuitive, accessible, and beautiful interfaces.' },
-        { icon: '🏗️', title: 'Scalable Architecture', desc: 'Building robust systems that grow with your needs.' },
+        { icon: '⚡', title: 'Performance First', desc: 'Fast load times, optimized code — because speed is a feature' },
+        { icon: '🔧', title: 'Full-Stack Capable', desc: 'From database to UI, I handle the full product — no handoff gaps' },
+        { icon: '📱', title: 'Cross-Platform Ready', desc: 'Web and mobile from a single team — consistent quality across both' },
     ],
 
     // Trang About: Thống kê
