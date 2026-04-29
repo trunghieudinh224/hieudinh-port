@@ -160,7 +160,7 @@
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       document.getElementById('current-year').textContent = new Date().getFullYear();
-      document.getElementById('about-longBio').textContent = PROFILE.longBio;
+      document.getElementById('about-longBio').innerHTML = PROFILE.longBio;
       document.getElementById('about-avatar').src = PROFILE.avatar;
       document.getElementById('download-cv').href = PROFILE.cvLink;
 
