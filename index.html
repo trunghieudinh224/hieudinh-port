@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trung Hieu Dinh Portfolio</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Devicon -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body class="bg-slate-50 text-slate-900 pt-20">
+
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-black text-sm tracking-tighter">HD</span>
+                    </div>
+                    <span class="text-xl font-black text-slate-900 tracking-tight">Hieu<span class="text-slate-400">Dinh.</span></span>
+                </a>
+
+                <!-- Desktop Nav -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html"
+                        class="nav-link text-sm font-medium transition-all text-slate-600 hover:text-blue-600 pb-1">Home</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium transition-all text-slate-600 hover:text-blue-600 pb-1">About</a>
+                    <a href="projects.html"
+                        class="nav-link text-sm font-medium transition-all text-slate-600 hover:text-blue-600 pb-1">Projects</a>
+                    <a href="contact.html"
+                        class="bg-blue-600 text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ml-2">Contact</a>
+                </div>
+
+                <!-- Mobile Hamburger -->
+                <button id="hamburger-btn" class="md:hidden p-2 text-slate-600 hover:text-blue-600 transition-colors"
+                    aria-expanded="false" aria-label="Toggle menu">
+                    <div class="relative w-6 h-5">
+                        <span class="hamburger-line hamburger-top"></span>
+                        <span class="hamburger-line hamburger-middle"></span>
+                        <span class="hamburger-line hamburger-bottom"></span>
+                    </div>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md mobile-menu-animate">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+                <a href="index.html"
+                    class="px-4 py-3 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-blue-600">Home</a>
+                <a href="about.html"
+                    class="px-4 py-3 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-blue-600">About</a>
+                <a href="projects.html"
+                    class="px-4 py-3 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-blue-600">Projects</a>
+                <a href="contact.html"
+                    class="mt-2 bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- ── Hero ── -->
+        <section class="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+            <!-- Animated blobs -->
+            <div class="parallax-blob absolute inset-0 pointer-events-none">
+                <div class="hero-blob hero-blob-1"></div>
+            </div>
+            <div class="parallax-blob absolute inset-0 pointer-events-none">
+                <div class="hero-blob hero-blob-2"></div>
+            </div>
+            <div class="parallax-blob absolute inset-0 pointer-events-none">
+                <div class="hero-blob hero-blob-3"></div>
+            </div>
+
+            <div
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[55fr_45fr] gap-12 items-center relative z-10">
+                <!-- Left: text -->
+                <div>
+                    <div style="animation: fadeInUp 0.55s ease forwards; opacity: 0;">
+                        <span
+                            class="inline-block bg-blue-50 text-blue-700 text-xs font-black tracking-widest uppercase px-4 py-2 rounded-full mb-6 border border-blue-100">
+                            ✦ Available for freelance
+                        </span>
+                    </div>
+                    <h1 id="hero-tagline" class="text-5xl lg:text-7xl font-extrabold leading-[1.1] mb-8 gradient-text"
+                        style="animation: fadeInUp 0.6s ease 0.15s forwards; opacity: 0;">
+                        <!-- Rendered by JS -->
+                    </h1>
+                    <p id="hero-bio" class="text-lg text-slate-500 max-w-lg mb-12 leading-relaxed"
+                        style="animation: fadeInUp 0.6s ease 0.3s forwards; opacity: 0;">
+                        <!-- Rendered by JS -->
+                    </p>
+                    <div class="flex flex-wrap gap-4" style="animation: fadeInUp 0.6s ease 0.45s forwards; opacity: 0;">
+                        <a href="projects.html"
+                            class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:shadow-xl hover:shadow-blue-300 hover:-translate-y-0.5">
+                            View Work
+                        </a>
+                        <a href="contact.html"
+                            class="px-8 py-4 rounded-xl font-bold text-slate-700 hover:bg-slate-100 transition-all border border-slate-200 hover:border-slate-300">
+                            Contact Me
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: floating image -->
+                <div class="relative group" style="animation: fadeInRight 0.7s ease 0.2s forwards; opacity: 0;">
+                    <div
+                        class="absolute -inset-4 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl -rotate-3 transition-transform group-hover:rotate-0 duration-500">
+                    </div>
+                    <img id="hero-image" src="" alt="Profile"
+                        class="float-animation relative w-full aspect-square object-cover rounded-3xl shadow-2xl rotate-3 transition-transform group-hover:rotate-0 duration-500" />
+                </div>
+            </div>
+        </section>
+
+        <!-- ── About ── -->
+        <section id="about" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-20 items-start">
+                    <div class="animate-fade-left">
+                        <h2 class="text-3xl font-bold text-slate-900 mb-8">About Me</h2>
+                        <div id="about-bio" class="space-y-6 text-slate-500 leading-relaxed text-lg">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+                    <div id="strengths-grid" class="grid sm:grid-cols-3 gap-6">
+                        <!-- Rendered by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Skills ── -->
+        <section class="py-24 bg-slate-50/50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
+                <h2 class="animate-on-scroll text-3xl font-bold text-slate-900 mb-4">Technical Skills</h2>
+                <p class="animate-on-scroll stagger-1 text-slate-500">The tools and technologies I use to bring ideas to
+                    life.</p>
+            </div>
+            <div id="skills-grid" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+                <!-- Rendered by JS -->
+            </div>
+        </section>
+
+        <!-- ── Featured Projects ── -->
+        <section class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-end mb-16">
+                <div class="animate-fade-left">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">Featured Projects</h2>
+                    <p class="text-slate-500">A selection of my best work.</p>
+                </div>
+                <a href="projects.html"
+                    class="animate-fade-right text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                    View all projects
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+            <div id="featured-projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-8">
+                <!-- Rendered by JS -->
+            </div>
+        </section>
+
+        <!-- ── Contact CTA ── -->
+        <section id="contact" class="py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div
+                    class="animate-on-scroll bg-white rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 grid lg:grid-cols-[2fr_3fr]">
+                    <!-- Left panel -->
+                    <div class="bg-blue-600 p-12 lg:p-16 text-white flex flex-col justify-between">
+                        <div>
+                            <h2 class="text-4xl font-bold mb-6">Get in touch</h2>
+                            <p class="text-blue-100 text-lg mb-12">
+                                I'm currently open to new opportunities. Whether you have a question or just want to say
+                                hi,
+                                I'll try my best to get back to you!
+                            </p>
+                            <div class="space-y-8">
+                                <div class="flex items-center gap-6">
+                                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-blue-200 text-sm">Email</p>
+                                        <p id="contact-email" class="font-bold text-lg"></p>
+                                    </div>
+                                </div>
+                                <div class="flex items-center gap-6">
+                                    <div class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+                                            viewBox="0 0 24 24" stroke="currentColor">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        <p class="text-blue-200 text-sm">Location</p>
+                                        <p id="contact-location" class="font-bold text-lg"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-12">
+                            <p class="text-blue-200 text-sm mb-4">Connect with me</p>
+                            <div class="flex gap-4">
+                                <a href="#" id="social-fb"
+                                    class="w-10 h-10 bg-white/10 hover:bg-white/25 transition-all hover:scale-110 rounded-lg flex items-center justify-center"
+                                    aria-label="Facebook">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                                    </svg>
+                                </a>
+                                <a href="#" id="social-email"
+                                    class="w-10 h-10 bg-white/10 hover:bg-white/25 transition-all hover:scale-110 rounded-lg flex items-center justify-center"
+                                    aria-label="Email">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path
+                                            d="M24 5.457v13.909c0 .904-.732 1.636-1.636 1.636h-3.819V11.73L12 16.64l-6.545-4.91v9.273H1.636A1.636 1.636 0 010 19.366V5.457c0-1.356 1.543-2.131 2.61-1.282L12 10.74l9.39-6.565C22.457 3.326 24 4.101 24 5.457z" />
+                                    </svg>
+                                </a>
+                                <a href="#" id="social-github"
+                                    class="w-10 h-10 bg-white/10 hover:bg-white/25 transition-all hover:scale-110 rounded-lg flex items-center justify-center"
+                                    aria-label="GitHub">
+                                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                        <path fill-rule="evenodd"
+                                            d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                            clip-rule="evenodd" />
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Right: form -->
+                    <div class="p-12 lg:p-16">
+                        <form class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-slate-700">Name</label>
+                                    <input type="text" placeholder="John Doe"
+                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
+                                </div>
+                                <div class="space-y-2">
+                                    <label class="text-sm font-bold text-slate-700">Email</label>
+                                    <input type="email" placeholder="john@example.com"
+                                        class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
+                                </div>
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-700">Subject</label>
+                                <input type="text" placeholder="Project Inquiry"
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm font-bold text-slate-700">Message</label>
+                                <textarea rows="6" placeholder="Tell me about your project..."
+                                    class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"></textarea>
+                            </div>
+                            <button type="submit"
+                                class="pulse-glow w-full sm:w-auto bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center justify-center gap-2">
+                                Send Message
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20"
+                                    fill="currentColor">
+                                    <path
+                                        d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z" />
+                                </svg>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-slate-200">
+                <p class="text-sm text-slate-400">
+                    &copy; <span id="current-year"></span> Trung Hieu Dinh. All rights reserved.
+                </p>
+
+                <div class="flex items-center gap-8 text-slate-400 font-medium">
+                    <a href="contact.html" class="hover:text-blue-600 transition-colors" aria-label="Contact">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M16 12a4 4 0 10-8 0 4 4 0 008 0zm0 0v1.5a2.5 2.5 0 005 0V12a9 9 0 10-9 9m4.5-1.206a8.959 8.959 0 01-4.5 1.207" />
+                        </svg>
+                    </a>
+                    <a href="#" id="footer-linkedin" class="hover:text-blue-600 transition-colors"
+                        aria-label="LinkedIn">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
+                        </svg>
+                    </a>
+                    <a href="#" id="footer-github" class="hover:text-blue-600 transition-colors" aria-label="GitHub">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="data/profile.js?v=2"></script>
+    <script src="data/projects.js?v=2"></script>
+    <script src="assets/js/main.js?v=2"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.title = `${PROFILE.name} Portfolio`;
+
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Render Hero Typing Effect
+            const heroTagline = document.getElementById('hero-tagline');
+            const targetText = PROFILE.tagline;
+            let charIndex = 0;
+
+            function typeEffect() {
+                heroTagline.innerHTML = targetText.substring(0, charIndex + 1) + '<span class="animate-pulse text-blue-600">|</span>';
+                charIndex++;
+                if (charIndex < targetText.length) {
+                    setTimeout(typeEffect, 45); // Tốc độ gõ chữ (thấp hơn là nhanh hơn)
+                }
+            }
+            // Start typing effect
+            typeEffect();
+
+            document.getElementById('hero-bio').innerHTML = `Hi, I'm ${PROFILE.name}. ` + PROFILE.shortBio;
+            document.getElementById('hero-image').src = PROFILE.avatar;
+
+            // Render About Bio
+            document.getElementById('about-bio').innerHTML = PROFILE.bio.map(p => `<p>${p}</p>`).join('');
+
+            // Render Strengths
+            const strengthsGrid = document.getElementById('strengths-grid');
+            PROFILE.strengths.forEach((s, i) => {
+                const div = document.createElement('div');
+                div.className = `animate-on-scroll stagger-${i + 1} p-6 rounded-2xl border border-slate-100 bg-slate-50 hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group`;
+                div.innerHTML = `
+          <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-xl mb-4 group-hover:scale-110 transition-transform duration-300">
+            ${s.icon}
+          </div>
+          <h4 class="font-bold text-slate-900 mb-2">${s.title}</h4>
+          <p class="text-xs text-slate-500 leading-relaxed">${s.desc}</p>
+        `;
+                strengthsGrid.appendChild(div);
+            });
+
+            // Render Skills
+            const skillsGrid = document.getElementById('skills-grid');
+            
+            const iconMap = {
+                'React': 'devicon-react-original colored',
+                'Vue.js': 'devicon-vuejs-plain colored',
+                'TypeScript': 'devicon-typescript-plain colored',
+                'Tailwind CSS': 'devicon-tailwindcss-original colored',
+                'Next.js': 'devicon-nextjs-original',
+                'Node.js': 'devicon-nodejs-plain colored',
+                'Python': 'devicon-python-plain colored',
+                'PostgreSQL': 'devicon-postgresql-plain colored',
+                'GraphQL': 'devicon-graphql-plain colored',
+                'Git': 'devicon-git-plain colored',
+                'Figma': 'devicon-figma-plain colored',
+                'Docker': 'devicon-docker-plain colored',
+                'AWS': 'devicon-amazonwebservices-original colored',
+                'MongoDB': 'devicon-mongodb-plain colored',
+                'REST APIs': 'devicon-network-plain',
+                'React Native': 'devicon-react-original colored',
+                'Swift': 'devicon-swift-plain colored',
+                'Firebase': 'devicon-firebase-plain colored'
+            };
+
+            PROFILE.skills.forEach((cat, i) => {
+                const div = document.createElement('div');
+                // Khung nhỏ hơn, giữ bóng xịn
+                div.className = `animate-fade-left stagger-${i + 1} relative bg-white p-8 rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-200/30 hover:shadow-2xl hover:shadow-blue-200/40 hover:-translate-y-2 transition-all duration-500 overflow-hidden group`;
+                
+                // Vệt sáng rõ ràng hơn (blue/purple)
+                const decorativeBg = `<div class="absolute -right-16 -top-16 w-48 h-48 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl group-hover:scale-[2] transition-transform duration-700 pointer-events-none"></div>`;
+
+                const skillsHTML = cat.items.map(skill => {
+                    const iconClass = iconMap[skill];
+                    const iconHtml = iconClass ? `<i class="${iconClass} text-base group-hover/tag:scale-125 group-hover/tag:rotate-6 transition-all duration-300"></i>` : '';
+                    // Font chữ nhỏ gọn lại
+                    return `<span class="group/tag px-3 py-1.5 rounded-lg text-xs font-bold border border-slate-200 text-slate-700 bg-slate-50 hover:bg-blue-50 hover:text-blue-700 hover:border-blue-300 hover:shadow-md hover:-translate-y-0.5 transition-all cursor-default flex items-center gap-1.5 w-max z-20 relative">${iconHtml} ${skill}</span>`;
+                }).join('');
+                
+                div.innerHTML = `
+          ${decorativeBg}
+          <div class="relative z-10">
+            <div class="flex items-center gap-4 mb-6">
+              <!-- Hộp icon màu xanh -->
+              <div class="w-12 h-12 bg-blue-100 border-2 border-white text-blue-600 rounded-xl flex items-center justify-center text-2xl shadow-lg shadow-blue-100 group-hover:rotate-12 group-hover:scale-110 transition-all duration-300">
+                ${cat.icon}
+              </div>
+              <h3 class="text-xl font-bold text-slate-800 tracking-tight">${cat.title}</h3>
+            </div>
+            <div class="flex flex-wrap gap-2">
+              ${skillsHTML}
+            </div>
+          </div>
+        `;
+                skillsGrid.appendChild(div);
+            });
+
+            // Render Featured Projects
+            const featuredContainer = document.getElementById('featured-projects');
+            const featured = PROJECTS.slice(0, 3);
+            featured.forEach((p, index) => {
+                featuredContainer.innerHTML += window.renderProjectCard(p, index);
+            });
+
+            // Render Contact Info
+            document.getElementById('contact-email').textContent = PROFILE.email;
+            document.getElementById('contact-location').textContent = PROFILE.location;
+            document.getElementById('social-fb').href = PROFILE.facebook;
+            document.getElementById('social-email').href = `mailto:${PROFILE.email}`;
+            document.getElementById('social-github').href = PROFILE.github;
+
+            document.getElementById('footer-linkedin').href = PROFILE.linkedin;
+            document.getElementById('footer-github').href = PROFILE.github;
+        });
+    </script>
+</body>
+
+</html>

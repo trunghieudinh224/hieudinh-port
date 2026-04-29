@@ -1,0 +1,470 @@
+/* ===================== KEYFRAMES ===================== */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(28px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) rotate(3deg);
+    }
+
+    50% {
+        transform: translateY(-14px) rotate(3deg);
+    }
+}
+
+@keyframes blob {
+
+    0%,
+    100% {
+        border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+        transform: translate(0, 0) scale(1);
+    }
+
+    25% {
+        border-radius: 50% 60% 70% 40%/45% 55% 45% 65%;
+        transform: translate(5%, 10%) scale(1.05);
+    }
+
+    50% {
+        border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+        transform: translate(10%, 5%) scale(0.95);
+    }
+
+    75% {
+        border-radius: 60% 40% 50% 50%/30% 45% 55% 70%;
+        transform: translate(5%, -5%) scale(1.02);
+    }
+}
+
+@keyframes gradientShift {
+
+    0%,
+    100% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+
+    100% {
+        background-position: 200% center;
+    }
+}
+
+@keyframes mobileMenuSlide {
+    from {
+        opacity: 0;
+        transform: translateY(-8px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(59, 130, 246, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 14px rgba(59, 130, 246, 0);
+    }
+}
+
+/* ===================== SCROLL REVEAL ===================== */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.animate-fade-left {
+    opacity: 0;
+    transform: translateX(-24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.animate-fade-left.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-fade-right {
+    opacity: 0;
+    transform: translateX(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+}
+
+.animate-fade-right.is-visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.animate-scale-in {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.animate-scale-in.is-visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes zoomHoldShrink {
+    /* Từ 0% đến 25%: Phóng to và nảy lên */
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+        animation-timing-function: cubic-bezier(0.34, 1.56, 0.64, 1); /* Đường cong tạo sức nảy */
+    }
+    
+    /* Bắt đầu dừng ở giây 0.45s (25% của 1.8s) */
+    25% {
+        opacity: 1;
+        transform: scale(1.35); /* Kích thước lúc phóng to nhất */
+        animation-timing-function: linear; /* Giữ nguyên không thay đổi */
+    }
+    
+    /* Kết thúc dừng ở giây 0.85s (47% của 1.8s). Khoảng dừng = 47% - 25% = 22% thời gian = ~0.4 giây */
+    47% {
+        opacity: 1;
+        transform: scale(1.35); /* Vẫn giữ nguyên kích thước 1.35 */
+        animation-timing-function: cubic-bezier(0.25, 1, 0.5, 1); /* Bắt đầu thu nhỏ mượt mà */
+    }
+    
+    /* Từ 47% đến 100%: Thu nhỏ về chuẩn */
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.animate-zoom-bounce {
+    opacity: 0;
+    transform: scale(0.2);
+}
+
+.animate-zoom-bounce.is-visible {
+    animation: zoomHoldShrink 1.8s forwards;
+}
+
+/* Stagger delays */
+.stagger-1 {
+    transition-delay: 0.1s;
+}
+
+.stagger-2 {
+    transition-delay: 0.2s;
+}
+
+.stagger-3 {
+    transition-delay: 0.3s;
+}
+
+.stagger-4 {
+    transition-delay: 0.4s;
+}
+
+.stagger-5 {
+    transition-delay: 0.5s;
+}
+
+.stagger-6 {
+    transition-delay: 0.6s;
+}
+
+/* ===================== HERO BLOBS ===================== */
+.hero-blob {
+    position: absolute;
+    filter: blur(70px);
+    animation: blob 9s ease-in-out infinite;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.hero-blob-1 {
+    width: 420px;
+    height: 420px;
+    background: rgba(96, 165, 250, 0.18);
+    top: -120px;
+    right: -80px;
+    animation-duration: 9s;
+}
+
+.hero-blob-2 {
+    width: 320px;
+    height: 320px;
+    background: rgba(167, 139, 250, 0.13);
+    bottom: -60px;
+    right: 220px;
+    animation-duration: 12s;
+    animation-delay: -3s;
+}
+
+.hero-blob-3 {
+    width: 260px;
+    height: 260px;
+    background: rgba(34, 211, 238, 0.10);
+    top: 120px;
+    right: 420px;
+    animation-duration: 14s;
+    animation-delay: -6s;
+}
+
+/* ===================== UTILITIES ===================== */
+.float-animation {
+    animation: float 5s ease-in-out infinite;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, #1e293b 0%, #2563eb 55%, #7c3aed 100%);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 6s ease infinite;
+}
+
+.mobile-menu-animate {
+    animation: mobileMenuSlide 0.25s ease forwards;
+}
+
+.pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+}
+
+/* Skill tag hover shimmer */
+.skill-tag {
+    transition: background 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.skill-tag:hover {
+    background: linear-gradient(90deg, #eff6ff, #dbeafe, #eff6ff);
+    background-size: 200% auto;
+    animation: shimmer 1.5s linear infinite;
+    border-color: #bfdbfe;
+    color: #2563eb;
+}
+
+/* 3D card */
+.card-3d {
+    transition: transform 0.15s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+/* Base body font */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f8fafc;
+    /* slate-50 */
+    color: #0f172a;
+    /* slate-900 */
+}
+
+/* Smooth scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: #f8fafc;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+}
+
+/* Project Grid transitions */
+.project-grid {
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.project-grid.animating {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+/* Active Nav Link underline */
+.nav-link {
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    background-color: #2563eb;
+    /* blue-600 */
+    transition: width 0.3s ease;
+    width: 0;
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.nav-link.active {
+    color: #2563eb;
+}
+
+/* Hamburger animations */
+.hamburger-line {
+    position: absolute;
+    height: 2px;
+    width: 24px;
+    background-color: currentColor;
+    transition: all 0.3s ease;
+}
+
+.hamburger-top {
+    top: 0;
+}
+
+.hamburger-middle {
+    top: 10px;
+}
+
+.hamburger-bottom {
+    top: 20px;
+}
+
+.menu-open .hamburger-top {
+    transform: rotate(45deg);
+    top: 10px;
+}
+
+.menu-open .hamburger-middle {
+    opacity: 0;
+    transform: scaleX(0);
+}
+
+.menu-open .hamburger-bottom {
+    transform: rotate(-45deg);
+    top: 10px;
+}
+
+/* Filter button active state */
+.filter-btn.active {
+    background-color: #0f172a;
+    color: white;
+    border-color: #0f172a;
+    box-shadow: 0 10px 15px -3px rgba(15, 23, 42, 0.2), 0 4px 6px -2px rgba(15, 23, 42, 0.1);
+}
+
+/* ===================== PAGE TRANSITIONS ===================== */
+.page-fade {
+    opacity: 1;
+    transition: opacity 0.3s ease-out;
+}
+
+.page-fade-out {
+    opacity: 0;
+}
+
+/* ===================== INFINITE MARQUEE ===================== */
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+    width: 100%;
+    display: flex;
+}
+
+.marquee-content {
+    display: flex;
+    width: max-content;
+    animation: marqueeScroll 35s linear infinite;
+    will-change: transform;
+}
+
+.marquee-container:hover .marquee-content {
+    animation-play-state: paused;
+}
+
+@keyframes marqueeScroll {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
