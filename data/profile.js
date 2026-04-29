@@ -44,9 +44,10 @@ My work sits at the intersection of frontend precision and full-stack thinking. 
     // Trang About:
 
     skills: [
-        { title: 'FRONTEND', icon: '💻', items: ['React', 'Vue.js', 'TypeScript', 'Tailwind CSS'] },
-        { title: 'BACKEND', icon: '🗄️', items: ['Node.js', 'Python', 'PostgreSQL', 'GraphQL'] },
-        { title: 'TOOLS & DEVOPS', icon: '🛠️', items: ['Git', 'Docker', 'Figma'] },
+        { title: 'Frontend', icon: '💻', items: ['HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'React'] },
+        { title: 'Mobile', icon: '📱', items: ['Android (Java)', 'iOS (Swift)', 'Flutter'] },
+        { title: 'Backend', icon: '🗄️', items: ['Node.js', 'Laravel', 'MySQL', 'MongoDB', 'Firebase'] },
+        { title: 'Tools', icon: '🛠️', items: ['Git', 'Postman', 'Android Studio', 'Xcode'] },
     ],
 
     // Kinh nghiệm làm việc
