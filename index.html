@@ -133,7 +133,7 @@
         </section>
 
         <!-- ── About ── -->
-        <section id="about" class="py-24 bg-white">
+        <section id="about" class="py-16 md:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-2 gap-20 items-start">
                     <div class="animate-fade-left">
@@ -142,7 +142,8 @@
                             <!-- Rendered by JS -->
                         </div>
                     </div>
-                    <div id="strengths-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-6">
+                    <div id="strengths-grid"
+                        class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-1 xl:grid-cols-3 gap-6">
                         <!-- Rendered by JS -->
                     </div>
                 </div>
@@ -150,19 +151,20 @@
         </section>
 
         <!-- ── Skills ── -->
-        <section class="py-24 bg-slate-50/50">
+        <section class="py-16 md:py-24 bg-slate-50/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
                 <h2 class="animate-on-scroll text-3xl font-bold text-slate-900 mb-4">Technical Skills</h2>
                 <p class="animate-on-scroll stagger-1 text-slate-500">The tools and technologies I use to bring ideas to
                     life.</p>
             </div>
-            <div id="skills-grid" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div id="skills-grid"
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Rendered by JS -->
             </div>
         </section>
 
         <!-- ── Featured Projects ── -->
-        <section class="py-24 bg-white">
+        <section class="py-16 md:py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-end mb-16">
                 <div class="animate-fade-left">
                     <h2 class="text-3xl font-bold text-slate-900 mb-4">Featured Projects</h2>
@@ -170,7 +172,7 @@
                 </div>
                 <a href="projects.html"
                     class="animate-fade-right text-blue-600 font-bold flex items-center gap-2 hover:gap-3 transition-all">
-                    View all projects
+                    View all
                     <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
                         <path fill-rule="evenodd"
                             d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
@@ -178,18 +180,19 @@
                     </svg>
                 </a>
             </div>
-            <div id="featured-projects" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div id="featured-projects"
+                class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Rendered by JS -->
             </div>
         </section>
 
         <!-- ── Contact CTA ── -->
-        <section id="contact" class="py-24 bg-slate-50">
+        <section id="contact" class="py-16 md:py-24 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
                     class="animate-on-scroll bg-white rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 grid lg:grid-cols-[2fr_3fr]">
                     <!-- Left panel -->
-                    <div class="bg-blue-600 p-12 lg:p-16 text-white flex flex-col justify-between">
+                    <div class="bg-blue-600 p-7 md:p-12 lg:p-16 text-white flex flex-col justify-between">
                         <div>
                             <h2 class="text-4xl font-bold mb-6">Get in touch</h2>
                             <p class="text-blue-100 text-lg mb-12">
@@ -260,7 +263,7 @@
                         </div>
                     </div>
                     <!-- Right: form -->
-                    <div class="p-12 lg:p-16">
+                    <div class="p-7 md:p-12 lg:p-16">
                         <form class="space-y-6">
                             <div class="grid sm:grid-cols-2 gap-6">
                                 <div class="space-y-2">
@@ -419,7 +422,7 @@
             PROFILE.skills.forEach((cat, i) => {
                 const div = document.createElement('div');
                 // Khung nhỏ hơn, giữ bóng xịn
-                div.className = `animate-fade-left stagger-${i + 1} relative bg-white p-8 rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-200/30 hover:shadow-2xl hover:shadow-blue-200/40 hover:-translate-y-2 transition-all duration-500 overflow-hidden group`;
+                div.className = `animate-fade-left stagger-${i + 1} relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-200/30 hover:shadow-2xl hover:shadow-blue-200/40 hover:-translate-y-2 transition-all duration-500 overflow-hidden group`;
 
                 // Vệt sáng rõ ràng hơn (blue/purple)
                 const decorativeBg = `<div class="absolute -right-16 -top-16 w-48 h-48 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl group-hover:scale-[2] transition-transform duration-700 pointer-events-none"></div>`;
