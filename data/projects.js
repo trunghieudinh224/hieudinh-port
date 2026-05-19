@@ -294,7 +294,7 @@ const PROJECTS = [
       { url: 'assets/images/projects/nail-salon-booking/client/gallery.png', title: 'Client Gallery Page' },
       { url: 'assets/images/projects/nail-salon-booking/client/contact.png', title: 'Client Contact Page' },
     ],
-    liveLink: '',
+    liveLink: 'https://darkblue-dinosaur-881793.hostingersite.com/',
     repoLink: '',
   },
 
