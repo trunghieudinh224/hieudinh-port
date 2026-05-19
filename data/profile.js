@@ -32,7 +32,7 @@ My work sits at the intersection of frontend precision and full-stack thinking. 
     github: 'https://github.com/trunghieudinh224',  // ← Link GitHub
     linkedin: 'https://www.facebook.com/dth2204/', // ← Dùng Facebook thay LinkedIn
     facebook: 'https://www.facebook.com/dth2204/',
-    cvLink: '#',                   // ← Link CV/Resume của bạn
+    cvLink: 'cv/Trung_Hieu_Dinh_CV.pdf',  // ← Link CV/Resume của bạn
     avatar: 'assets/images/port-ava.JPG',
 
     // Trang Home: 3 điểm mạnh
