@@ -217,6 +217,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Add fade-in class on load
     document.body.classList.add('page-fade');
     
+    // Fix Safari / BFCache blank screen issue when navigating back
+    window.addEventListener('pageshow', (event) => {
+      if (event.persisted) {
+        document.body.classList.remove('page-fade-out');
+      }
+    });
+    
     // Intercept clicks on local links
     document.addEventListener('click', (e) => {
       const link = e.target.closest('a');
