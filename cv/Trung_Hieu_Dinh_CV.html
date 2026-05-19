@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trung Hieu Dinh - CV</title>
+  <style>
+    @page { size: Letter; margin: 0.5in 0.55in; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #f1f1f1;
+      color: #000;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 10.4px;
+      line-height: 1.22;
+    }
+    .page {
+      width: 8.5in;
+      min-height: 11in;
+      margin: 0 auto;
+      padding: 0.5in 0.55in;
+      background: #fff;
+    }
+    h1 {
+      margin: 0;
+      text-align: center;
+      font-size: 30px;
+      line-height: 1;
+      letter-spacing: 0;
+    }
+    .contact {
+      margin-top: 6px;
+      text-align: center;
+      font-size: 11.5px;
+    }
+    a { color: #000066; text-decoration: underline; }
+    .section-title {
+      margin-top: 7px;
+      padding-bottom: 1px;
+      border-bottom: 1px solid #777;
+      font-size: 15px;
+      font-weight: 700;
+    }
+    .entry-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 5px;
+      font-size: 12.8px;
+      font-weight: 700;
+    }
+    .entry-sub {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 2px;
+      padding-left: 16px;
+      font-size: 11.5px;
+      font-style: italic;
+    }
+    ul {
+      margin: 2px 0 0 34px;
+      padding: 0;
+    }
+    li { margin: 1px 0; }
+    .project {
+      margin-top: 6px;
+      padding-left: 16px;
+      font-size: 12px;
+    }
+    .project-title { font-weight: 700; color: #000066; text-decoration: none; }
+    .project-tech { color: #000066; font-style: italic; }
+    .skill-line {
+      margin-top: 2px;
+      padding-left: 16px;
+      font-size: 11.5px;
+    }
+    .label { font-weight: 700; }
+    @media print {
+      body { background: #fff; }
+      .page { margin: 0; padding: 0; width: auto; min-height: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <h1>Trung Hieu Dinh</h1>
+    <div class="contact">
+      trunghieudinh224@gmail.com | <a href="https://github.com/trunghieudinh224">GitHub</a> |
+      <a href="https://www.facebook.com/dth2204/">Facebook</a> | Ho Chi Minh City, VN | Web &amp; Mobile Developer | Fullstack Developer
+    </div>
+
+    <div class="section-title">Education</div>
+    <div class="entry-head"><span>Ton Duc Thang University</span><span>Ho Chi Minh City, VN</span></div>
+    <div class="entry-sub"><span>Bachelor of Computer Science - Information Systems</span><span>2017 - 2021</span></div>
+
+    <div class="section-title">Work Experience</div>
+    <div class="entry-head"><span>Web Systems Developer</span><span>2024 - Present</span></div>
+    <div class="entry-sub"><span>Marutou Compack Vietnam</span><span>Ho Chi Minh City, VN</span></div>
+    <ul>
+      <li><strong>Led migration of legacy Java/NetBeans desktop gas management systems</strong> into modern web-based platforms, improving maintainability and browser-based access for internal users.</li>
+      <li><strong>Architected and delivered internal web management systems</strong> for Japanese manufacturing and enterprise workflows, covering asset tracking, operations, and reporting dashboards.</li>
+      <li>Converted complex native workflows into responsive web interfaces while preserving business rules, data entry patterns, and real-time operational requirements.</li>
+    </ul>
+
+    <div class="entry-head"><span>Freelance Fullstack Developer</span><span>2023 - Present</span></div>
+    <div class="entry-sub"><span>Independent / Self-employed</span><span>Remote</span></div>
+    <ul>
+      <li><strong>Built and shipped 20+ production projects</strong> across Vietnam, Japan, the US, and Australia, including e-commerce stores, booking platforms, POS systems, B2B portals, and automation tools.</li>
+      <li>Owned end-to-end delivery across Laravel/PHP, MySQL, Blade, Vanilla JavaScript/CSS, payment integrations, CMS, admin dashboards, hosting, deployment, and client handoff.</li>
+      <li>Implemented business-critical flows such as checkout, voucher validation, staff scheduling, QR ordering, order management, real-time notifications, and SEO/content management.</li>
+    </ul>
+
+    <div class="entry-head"><span>Cross-Platform Developer (Android / iOS / Web)</span><span>2022 - 2024</span></div>
+    <div class="entry-sub"><span>Marutou Compack Vietnam</span><span>Ho Chi Minh City, VN</span></div>
+    <ul>
+      <li>Extended Android gas utility applications to iOS, maintaining feature parity and adapting workflows for mobile platform differences.</li>
+      <li>Led web conversion of core Android app functionality into responsive browser-based systems for internal operations.</li>
+      <li>Independently built Uketsuke Kun, a full gas communication web application, from requirements through production deployment.</li>
+    </ul>
+
+    <div class="entry-head"><span>Android Developer</span><span>May 2021 - 2022</span></div>
+    <div class="entry-sub"><span>Marutou Compack Vietnam</span><span>Ho Chi Minh City, VN</span></div>
+    <ul>
+      <li>Built and maintained Android applications for Japanese gas utility operations, covering field work support, data entry, API integration, and real-time reporting.</li>
+      <li>Transitioned from fresher to Android development within 3 months while learning Java, mobile architecture, and Japanese business workflows.</li>
+    </ul>
+
+    <div class="section-title">Projects</div>
+    <div class="project"><span class="project-title">Candle Shop</span> | <span class="project-tech">Laravel, PHP, MySQL, Stripe, Telegram Bot API, Reverb</span></div>
+    <ul>
+      <li>Built a full e-commerce platform with bilingual storefront, cart, checkout, Stripe payment, voucher system, order management, SEO/content settings, reviews, and admin dashboard.</li>
+      <li>Implemented two-phase checkout, server-side voucher validation, dynamic shipping fees, invoice PDFs, and real-time Telegram/WebSocket notifications to reduce payment and stock inconsistencies.</li>
+    </ul>
+
+    <div class="project"><span class="project-title">Nail Salon Booking Web</span> | <span class="project-tech">Laravel, MySQL, JavaScript, Scheduler, Mail</span></div>
+    <ul>
+      <li>Built a mobile-first white-label booking platform for US nail salons with a 5-step booking wizard, service/staff selection, customer CRM, gallery, reviews, technician profiles, and CMS.</li>
+      <li>Designed slot-availability logic for sequential multi-service appointments across different staff schedules, including transactional conflict checks and reminder automation.</li>
+    </ul>
+
+    <div class="project"><span class="project-title">ProPOS - Fastfood POS</span> | <span class="project-tech">Laravel, MySQL, QR Code, KDS, Vanilla JS</span></div>
+    <ul>
+      <li>Built a QR-based restaurant POS with customer ordering, staff portal, table map, Kitchen Display System, owner dashboard, menu/table/staff CRUD, tax/service settings, and revenue reports.</li>
+      <li>Implemented role-based portals and QR table sessions so customer orders, kitchen tickets, and owner reports stay synchronized without requiring app installation.</li>
+    </ul>
+
+    <div class="project"><span class="project-title">Fabrico - B2B Uniform Platform</span> | <span class="project-tech">Laravel, MySQL, Bootstrap, CMS, Analytics</span></div>
+    <ul>
+      <li>Delivered a B2B ordering platform for an Australian workwear brand with industry browsing, personalization inquiries, wholesale order flow, admin CMS, contact inbox, SEO settings, and analytics cards.</li>
+    </ul>
+
+    <div class="project"><span class="project-title">Memory Challenge</span> | <span class="project-tech">Android Java, SQLite, XML UI, Material Components</span></div>
+    <ul>
+      <li>Built a native Android memory game with timed multi-level gameplay, score bonuses, ranking, player setup, custom animations, sound/vibration settings, and multilingual UI.</li>
+    </ul>
+
+    <div class="section-title">Technical Skills</div>
+    <div class="skill-line"><span class="label">Frontend:</span> HTML, CSS, Tailwind CSS, JavaScript, React, Blade, Bootstrap, responsive UI, animations</div>
+    <div class="skill-line"><span class="label">Backend:</span> Laravel, PHP, Node.js, FastAPI, MySQL, MongoDB, Firebase, REST APIs, authentication, admin dashboards</div>
+    <div class="skill-line"><span class="label">Mobile:</span> Android Java, iOS Swift, Flutter, Android XML, SQLite, SharedPreferences</div>
+    <div class="skill-line"><span class="label">Integrations:</span> Stripe, Telegram Bot API, Google APIs, WebSocket/Reverb, email/PDF generation</div>
+    <div class="skill-line"><span class="label">Tools &amp; Other:</span> Git, Vite, Axios, Hostinger deployment, Chart.js, GSAP, Splide.js, Swiper.js</div>
+
+    <div class="section-title">Highlights</div>
+    <div class="skill-line">5+ years of experience | 20+ shipped projects | 15+ technologies used | Fullstack web, mobile, admin systems, booking, POS, e-commerce, and automation</div>
+  </main>
+</body>
+</html>
