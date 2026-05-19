@@ -12,6 +12,13 @@ Dự án này là portfolio cá nhân hiện đang ở dạng React/Vite/TypeScr
 - Ưu tiên code rõ ràng, dễ sửa cho người mới học HTML/CSS/JS.
 - Không refactor hoặc xóa các file React gốc chỉ để dọn dẹp.
 
+## Ngôn Ngữ Trao Đổi
+
+- Luôn trả lời chủ dự án bằng tiếng Việt trong quá trình làm việc, bao gồm cập nhật tiến độ, giải thích kỹ thuật, câu hỏi làm rõ, tổng kết thay đổi và hướng dẫn test.
+- Khi cần lập plan, checklist hoặc mô tả các bước thực hiện, viết bằng tiếng Việt rõ ràng, ngắn gọn và dễ hiểu.
+- Chỉ giữ nguyên tiếng Anh cho tên file, tên thư mục, tên biến, câu lệnh terminal, API, package, thông báo lỗi gốc hoặc nội dung code cần chính xác.
+- Nếu người dùng chủ động yêu cầu dùng tiếng Anh cho một phản hồi cụ thể thì làm theo yêu cầu đó, sau đó quay lại tiếng Việt ở các phản hồi tiếp theo.
+
 ## Source React Dùng Làm Tham Chiếu
 
 - `App.tsx`
@@ -80,4 +87,3 @@ Có thể thêm file nếu cần, nhưng không nên làm cấu trúc phức t�
 - Project detail đọc được dữ liệu theo query string, hash, hoặc có fallback để người dùng không gặp trang trống.
 - Mobile layout không vỡ.
 - Không có thay đổi ngoài ý muốn trong source React gốc.
-

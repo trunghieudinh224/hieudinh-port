@@ -19,9 +19,18 @@ My work sits at the intersection of frontend precision and full-stack thinking. 
 
     // Thông tin liên lạc
     email: 'trunghieudinh224@gmail.com',  // ← Email của bạn
+    contactForm: {
+        // mode: 'mailto' works when opening HTML files directly.
+        // To send without opening an email app, change mode to 'api' and add a Formspree/Web3Forms endpoint.
+        mode: 'api',
+        endpoint: 'https://api.web3forms.com/submit',
+        accessKey: 'cb5725a9-14b5-42b8-9588-1e905d59fdb9',
+        fromName: 'HieuDinh Portfolio',
+        subjectPrefix: 'Portfolio inquiry',
+    },
     location: 'Ho Chi Minh City, VN',
     github: 'https://github.com/trunghieudinh224',  // ← Link GitHub
-    linkedin: 'https://linkedin.com', // ← Link LinkedIn
+    linkedin: 'https://www.facebook.com/dth2204/', // ← Dùng Facebook thay LinkedIn
     facebook: 'https://www.facebook.com/dth2204/',
     cvLink: '#',                   // ← Link CV/Resume của bạn
     avatar: 'assets/images/port-ava.JPG',
@@ -35,10 +44,10 @@ My work sits at the intersection of frontend precision and full-stack thinking. 
 
     // Trang About: Thống kê
     stats: [
-        { label: 'Years Experience', value: '5+' },
-        { label: 'Projects Completed', value: '40+' },
-        { label: 'Happy Clients', value: '20+' },
-        { label: 'GitHub Commits', value: '2,500+' },
+        { label: 'Years of Experience', value: '5+' },
+        { label: 'Projects Shipped', value: '20+' },
+        { label: 'Technologies Used', value: '15+' },
+        { label: 'Total Commits', value: '2,000+' },
     ],
 
     // Trang About:
@@ -49,37 +58,53 @@ My work sits at the intersection of frontend precision and full-stack thinking. 
         { title: 'Backend', icon: '🗄️', items: ['Node.js', 'Laravel', 'MySQL', 'MongoDB', 'Firebase'] },
     ],
 
-    // Kinh nghiệm làm việc
+    // Kinh nghiệm làm việc (thứ tự cũ → mới; UI sẽ reverse để hiện mới nhất trên cùng)
     experience: [
         {
-            period: '2021 - PRESENT',
-            role: 'Senior Frontend Engineer',
-            company: 'TechFlow Solutions',
+            period: 'May 2021 - 2022',
+            role: 'Android Developer',
+            company: 'Marutou Compack Vietnam',
             location: 'Ho Chi Minh City, VN',
-            description: 'Spearheaded the migration of a legacy jQuery codebase to React 18, improving page load times by 40% and increasing user retention by 15%. Mentored junior developers and established CI/CD pipelines.',
+            description: 'Joined as a fresher and transitioned into Android development within 3 months. Built and maintained multiple Android applications for Japanese gas utility operations — covering field work support, data entry, and real-time reporting. Gained hands-on experience with Java, API integration, and Japanese business workflows.',
+            isCurrent: false,
+        },
+        {
+            period: '2022 - 2024',
+            role: 'Cross-Platform Developer (Android / iOS / Web)',
+            company: 'Marutou Compack Vietnam',
+            location: 'Ho Chi Minh City, VN',
+            description: 'Extended Android gas utility apps to iOS, ensuring feature parity across both platforms. Subsequently led the web conversion of core Android apps, rebuilding native functionality into responsive browser-based interfaces. Independently built Uketsuke Kun — a full gas communication web app — from requirements through to production deployment.',
+            isCurrent: false,
+        },
+        {
+            period: '2023 - PRESENT',
+            role: 'Freelance Fullstack Developer',
+            company: 'Independent / Self-employed',
+            location: 'Remote',
+            description: 'Built and shipped production web applications for clients across Vietnam, the US, and Australia. Projects include a nail salon booking platform (Laravel, US market), a B2B uniform ordering system (Fabrico, Australia), multiple e-commerce stores (Candle Shop, Blanco Floral, Kiến Đạo), a QR-based POS system (ProPOS), and an automated cryptocurrency trading bot (Python / FastAPI).',
             isCurrent: true,
         },
         {
-            period: '2019 - 2021',
-            role: 'Full Stack Developer',
-            company: 'Creative Pulse Agency',
-            location: 'Remote',
-            description: 'Developed custom e-commerce solutions for high-profile clients using Shopify and Next.js. Integrated complex payment gateways, boosting conversion rates by 25% and handling over $1M in processed transactions.',
-            isCurrent: false,
+            period: '2024 - PRESENT',
+            role: 'Web Systems Developer',
+            company: 'Marutou Compack Vietnam',
+            location: 'Ho Chi Minh City, VN',
+            description: 'Leading the migration of legacy gas management desktop applications (Java / NetBeans) to modern web-based systems. Also architected and delivered internal web management platforms for Japanese manufacturing companies and enterprises — covering asset tracking, operations workflows, and reporting dashboards.',
+            isCurrent: true,
         },
-        {
-            period: '2017 - 2019',
-            role: 'Junior Web Developer',
-            company: 'StartUp Inc',
-            location: 'Remote',
-            description: 'Assisted in the development of a real-time chat application using React and Firebase. Collaborated with the design team to implement responsive layouts, growing the active user base from 0 to 10,000+ within the first 3 months.',
-            isCurrent: false,
-        }
     ],
 
     // Học vấn
     education: [
-        { title: 'BS in Computer Science', institution: 'Massachusetts Institute of Technology', period: '2013 - 2017', icon: 'MIT' },
-        { title: 'AWS Certified Solutions Architect', institution: 'Amazon Web Services', period: 'Issued 2022', icon: 'AWS' },
+        {
+            title: 'Bachelor of Computer Science',
+            institution: 'Ton Duc Thang University',
+            period: '2017 - 2021',
+            icon: 'TDT',
+            iconImg: 'https://tdtu.edu.vn/sites/www/files/logo-dh_0.png',
+            detail: 'Major: Information Systems',
+        },
     ],
 };
+
+window.PROFILE = PROFILE;

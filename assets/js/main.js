@@ -96,6 +96,18 @@ document.addEventListener('DOMContentLoaded', () => {
     const tagsHTML = project.tags.map(tag => 
       `<span class="skill-tag text-[11px] font-semibold px-2.5 py-1 rounded bg-slate-50 text-slate-600 border border-slate-100 cursor-default">${tag}</span>`
     ).join('');
+    const liveAction = project.liveLink ? `
+                <a href="${project.liveLink}" target="_blank" class="p-2.5 rounded-lg border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-100 hover:bg-blue-50 transition-all duration-200" aria-label="Visit website">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                  </svg>
+                </a>` : '';
+    const repoAction = project.repoLink ? `
+                <a href="${project.repoLink}" target="_blank" class="p-2.5 rounded-lg border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-100 hover:bg-blue-50 transition-all duration-200" aria-label="View GitHub repo">
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                  </svg>
+                </a>` : '';
 
     return `
       <div class="animate-on-scroll ${staggerClass}">
@@ -131,16 +143,8 @@ document.addEventListener('DOMContentLoaded', () => {
                 View Detail
               </a>
               <div class="flex gap-2">
-                <a href="${project.liveLink || '#'}" target="_blank" class="p-2.5 rounded-lg border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-100 hover:bg-blue-50 transition-all duration-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                  </svg>
-                </a>
-                <a href="${project.repoLink || '#'}" target="_blank" class="p-2.5 rounded-lg border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-100 hover:bg-blue-50 transition-all duration-200">
-                  <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
-                </a>
+                ${liveAction}
+                ${repoAction}
               </div>
             </div>
           </div>
@@ -230,9 +234,129 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   };
 
+  // Setup contact forms for static HTML pages.
+  const setupContactForms = () => {
+    const forms = document.querySelectorAll('[data-contact-form]');
+    if (!forms.length) return;
+
+    forms.forEach((form) => {
+      const status = form.querySelector('[data-form-status]');
+      const submitButton = form.querySelector('button[type="submit"]');
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const formData = new FormData(form);
+        const name = String(formData.get('name') || '').trim();
+        const email = String(formData.get('email') || '').trim();
+        const subject = String(formData.get('subject') || 'Portfolio inquiry').trim();
+        const message = String(formData.get('message') || '').trim();
+
+        if (!name || !email || !subject || !message) {
+          showStatus(status, 'Please fill in all fields before sending.', 'error');
+          return;
+        }
+
+        const contactConfig = window.PROFILE && window.PROFILE.contactForm ? window.PROFILE.contactForm : {};
+        const recipient = window.PROFILE && window.PROFILE.email ? window.PROFILE.email : '';
+        const useApi = contactConfig.mode === 'api' && contactConfig.endpoint;
+
+        if (useApi) {
+          await sendContactByApi({
+            endpoint: contactConfig.endpoint,
+            accessKey: contactConfig.accessKey,
+            fromName: contactConfig.fromName,
+            subjectPrefix: contactConfig.subjectPrefix,
+            name,
+            email,
+            subject,
+            formData,
+            status,
+            submitButton,
+            form,
+          });
+          return;
+        }
+
+        if (!recipient) {
+          showStatus(status, 'Contact email is missing in data/profile.js.', 'error');
+          return;
+        }
+
+        const body = [
+          `Name: ${name}`,
+          `Email: ${email}`,
+          '',
+          message,
+        ].join('\n');
+        const mailtoUrl = `mailto:${encodeURIComponent(recipient)}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+        window.location.href = mailtoUrl;
+        showStatus(status, 'Your email app should open with the message ready to send.', 'success');
+      });
+    });
+  };
+
+  const sendContactByApi = async ({ endpoint, accessKey, fromName, subjectPrefix, name, email, subject, formData, status, submitButton, form }) => {
+    const originalContent = submitButton ? submitButton.innerHTML : '';
+
+    try {
+      if (accessKey) {
+        formData.set('access_key', accessKey);
+      }
+      formData.set('from_name', fromName || 'HieuDinh Portfolio');
+      formData.set('replyto', email);
+      formData.set('Inquiry Subject', subject);
+      formData.set('subject', `${subjectPrefix || 'Portfolio inquiry'} from ${name}: ${subject}`);
+
+      if (submitButton) {
+        submitButton.disabled = true;
+        submitButton.textContent = 'Sending...';
+      }
+      showStatus(status, 'Sending your message...', 'info');
+
+      const response = await fetch(endpoint, {
+        method: 'POST',
+        body: formData,
+        headers: { Accept: 'application/json' },
+      });
+
+      if (!response.ok) {
+        throw new Error('Form service rejected the message.');
+      }
+
+      form.reset();
+      showStatus(status, 'Message sent successfully. Thank you!', 'success');
+    } catch (error) {
+      showStatus(status, 'Could not send automatically. Please email me directly instead.', 'error');
+    } finally {
+      if (submitButton) {
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalContent;
+      }
+    }
+  };
+
+  const showStatus = (element, message, type) => {
+    if (!element) {
+      alert(message);
+      return;
+    }
+
+    const colorClasses = {
+      success: 'text-emerald-600',
+      error: 'text-red-600',
+      info: 'text-slate-500',
+    };
+
+    element.textContent = message;
+    element.classList.remove('hidden', 'text-emerald-600', 'text-red-600', 'text-slate-500');
+    element.classList.add(colorClasses[type] || colorClasses.info);
+  };
+
   // Init all scripts
   setupNavbar();
   setupPageTransitions();
+  setupContactForms();
   // Delay initial setup slightly to ensure dynamic content is loaded (for Home/Projects pages)
   setTimeout(() => {
     setupScrollAnimation();

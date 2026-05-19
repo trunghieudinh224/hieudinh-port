@@ -1,239 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – Trung Hieu Dinh</title>
-  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
-  <link rel="stylesheet" href="assets/css/styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About – Trung Hieu Dinh</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="assets/css/styles.css">
 </head>
+
 <body class="bg-slate-50 text-slate-900 pt-20">
 
-  <!-- Navbar -->
-  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-slate-100">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex justify-between items-center h-20">
-        <a href="index.html" class="flex items-center gap-2.5">
-          <div class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
-            <span class="text-white font-black text-sm tracking-tighter">HD</span>
-          </div>
-          <span class="text-xl font-black text-slate-900 tracking-tight">Hieu<span class="text-slate-400">Dinh.</span></span>
-        </a>
-        <div class="hidden md:flex items-center gap-8">
-          <a href="index.html" class="nav-link text-sm font-medium transition-all text-slate-600 hover:text-blue-600 pb-1">Home</a>
-          <a href="about.html" class="nav-link text-sm font-medium transition-all text-slate-600 hover:text-blue-600 pb-1 active">About</a>
-          <a href="projects.html" class="nav-link text-sm font-medium transition-all text-slate-600 hover:text-blue-600 pb-1">Projects</a>
-          <a href="contact.html" class="bg-blue-600 text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ml-2">Contact</a>
-        </div>
-        <button id="hamburger-btn" class="md:hidden p-2 text-slate-600 hover:text-blue-600 transition-colors" aria-expanded="false" aria-label="Toggle menu">
-          <div class="relative w-6 h-5"><span class="hamburger-line hamburger-top"></span><span class="hamburger-line hamburger-middle"></span><span class="hamburger-line hamburger-bottom"></span></div>
-        </button>
-      </div>
-    </div>
-    <div id="mobile-menu" class="hidden md:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md mobile-menu-animate">
-      <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
-        <a href="index.html" class="px-4 py-3 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-blue-600">Home</a>
-        <a href="about.html" class="px-4 py-3 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-blue-600">About</a>
-        <a href="projects.html" class="px-4 py-3 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-blue-600">Projects</a>
-        <a href="contact.html" class="mt-2 bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors text-center">Contact</a>
-      </div>
-    </div>
-  </nav>
-
-  <main>
-    <!-- ── About Hero ── -->
-    <section class="relative pt-32 pb-20 lg:pt-40 lg:pb-24 overflow-hidden bg-white text-center border-b border-slate-100">
-      <!-- Decorative background glow -->
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/50 via-white to-white pointer-events-none"></div>
-      
-      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="animate-zoom-bounce">
-          <img id="about-avatar" src="" alt="Profile" class="w-32 h-32 lg:w-40 lg:h-40 rounded-full mx-auto mb-8 border-4 border-white shadow-xl object-cover ring-1 ring-slate-100">
-        </div>
-        
-        <h1 class="text-4xl lg:text-6xl font-extrabold leading-tight mb-8 text-slate-900 tracking-tight animate-fade-up">
-          The developer behind the <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">code.</span>
-        </h1>
-        
-        <div id="about-longBio" class="text-lg lg:text-xl text-slate-500 mb-10 leading-relaxed max-w-3xl mx-auto font-medium animate-fade-up" style="animation-delay: 0.1s;">
-          <!-- Rendered by JS -->
-        </div>
-        
-        <div class="flex flex-wrap justify-center gap-6 animate-fade-up" style="animation-delay: 0.2s;">
-          <a href="#experience" class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:shadow-xl hover:-translate-y-0.5">
-            See my work history
-          </a>
-          <a href="#" id="download-cv" class="px-8 py-4 rounded-xl font-bold text-slate-700 hover:bg-slate-50 transition-all border border-slate-200 hover:border-slate-300 flex items-center gap-2">
-            Download Resume
-            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
-            </svg>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ── Tech Marquee ── -->
-    <div class="bg-slate-950 text-white py-8 border-y border-slate-800/80 overflow-hidden relative z-20 shadow-xl">
-      <div class="marquee-container" id="tech-marquee">
-        <!-- Rendered by JS -->
-      </div>
-    </div>
-
-    <!-- Stats -->
-    <section class="py-20 lg:py-28 bg-white relative overflow-hidden">
-      <!-- Glow effect -->
-      <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[400px] bg-blue-50 blur-[100px] rounded-full pointer-events-none"></div>
-      
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        <div class="text-center mb-16">
-          <h2 class="text-3xl font-bold text-slate-900 mb-4">By The Numbers</h2>
-          <p class="text-slate-500 max-w-2xl mx-auto">A quick look at my professional journey and the milestones achieved along the way.</p>
-        </div>
-        <div id="stats-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-          <!-- Rendered by JS -->
-        </div>
-      </div>
-    </section>
-
-    <!-- Experience & Education -->
-    <section id="experience" class="py-24 bg-slate-50">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid lg:grid-cols-2 gap-16">
-          <div>
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-4 animate-on-scroll">
-              <span class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">💼</span> Work Experience
-            </h2>
-            <div id="experience-list" class="space-y-8 relative before:absolute before:inset-0 before:left-[19px] before:h-full before:w-0.5 before:bg-gradient-to-b before:from-blue-500 before:via-slate-200 before:to-transparent">
-              <!-- Rendered by JS -->
+    <!-- Navbar -->
+    <nav id="navbar"
+        class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white border-b border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center gap-2.5">
+                    <div class="w-8 h-8 bg-slate-900 rounded-lg flex items-center justify-center">
+                        <span class="text-white font-black text-sm tracking-tighter">HD</span>
+                    </div>
+                    <span class="text-xl font-black text-slate-900 tracking-tight">Hieu<span
+                            class="text-slate-400">Dinh.</span></span>
+                </a>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="index.html"
+                        class="nav-link text-sm font-medium transition-all text-slate-600 hover:text-blue-600 pb-1">Home</a>
+                    <a href="about.html"
+                        class="nav-link text-sm font-medium transition-all text-slate-600 hover:text-blue-600 pb-1 active">About</a>
+                    <a href="projects.html"
+                        class="nav-link text-sm font-medium transition-all text-slate-600 hover:text-blue-600 pb-1">Projects</a>
+                    <a href="contact.html"
+                        class="bg-blue-600 text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ml-2">Contact</a>
+                </div>
+                <button id="hamburger-btn" class="md:hidden p-2 text-slate-600 hover:text-blue-600 transition-colors"
+                    aria-expanded="false" aria-label="Toggle menu">
+                    <div class="relative w-6 h-5"><span class="hamburger-line hamburger-top"></span><span
+                            class="hamburger-line hamburger-middle"></span><span
+                            class="hamburger-line hamburger-bottom"></span></div>
+                </button>
             </div>
-          </div>
-          <div>
-            <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-4 animate-on-scroll">
-              <span class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center">🎓</span> Education
-            </h2>
-            <div id="education-list" class="space-y-6">
-              <!-- Rendered by JS -->
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+        <div id="mobile-menu"
+            class="hidden md:hidden border-t border-slate-100 bg-white/95 backdrop-blur-md mobile-menu-animate">
+            <div class="max-w-7xl mx-auto px-4 py-4 flex flex-col gap-1">
+                <a href="index.html"
+                    class="px-4 py-3 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-blue-600">Home</a>
+                <a href="about.html"
+                    class="px-4 py-3 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-blue-600">About</a>
+                <a href="projects.html"
+                    class="px-4 py-3 rounded-lg text-sm font-medium transition-all text-slate-600 hover:bg-slate-50 hover:text-blue-600">Projects</a>
+                <a href="contact.html"
+                    class="mt-2 bg-blue-600 text-white px-4 py-3 rounded-lg text-sm font-bold hover:bg-blue-700 transition-colors text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
 
-    <!-- CTA -->
-    <section class="py-24 bg-slate-900 text-center px-4 relative overflow-hidden">
-      <!-- Glow effect -->
-      <div class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[100px] rounded-full pointer-events-none"></div>
-      
-      <div class="max-w-3xl mx-auto animate-on-scroll relative z-10">
-        <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/50 text-green-400 text-sm font-semibold mb-8 backdrop-blur-sm">
-          <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-          Currently available for freelance projects
-        </span>
-        <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Let's build something great.</h2>
-        <p class="text-slate-400 text-lg mb-10 leading-relaxed">Whether it's a sleek mobile app, a scalable web platform, or just a quick consultation—I'm ready to bring your ideas to life.</p>
-        <a href="contact.html" class="inline-flex items-center gap-3 bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1">
-          Start a Conversation
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-            <path fill-rule="evenodd" d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z" clip-rule="evenodd" />
-          </svg>
-        </a>
-      </div>
-    </section>
-  </main>
+    <main>
+        <!-- ── About Hero ── -->
+        <section
+            class="relative pt-24 pb-20 lg:pt-36 lg:pb-24 overflow-hidden bg-white text-center border-b border-slate-100">
+            <!-- Decorative background glow -->
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-64 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-100/50 via-white to-white pointer-events-none">
+            </div>
 
-  <!-- Footer -->
-  <footer class="bg-slate-50 py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-slate-200">
-        <p class="text-sm text-slate-400">&copy; <span id="current-year"></span> Trung Hieu Dinh. All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="animate-zoom-bounce">
+                    <img id="about-avatar" src="" alt="Profile"
+                        class="w-32 h-32 lg:w-40 lg:h-40 rounded-full mx-auto mb-8 border-4 border-white shadow-xl object-cover ring-1 ring-slate-100">
+                </div>
 
-  <script src="data/profile.js"></script>
-  <script src="data/projects.js"></script>
-  <script src="assets/js/main.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      document.getElementById('current-year').textContent = new Date().getFullYear();
-      document.getElementById('about-longBio').innerHTML = PROFILE.longBio;
-      document.getElementById('about-avatar').src = PROFILE.avatar;
-      document.getElementById('download-cv').href = PROFILE.cvLink;
+                <h1
+                    class="text-4xl lg:text-6xl font-extrabold leading-tight mb-8 text-slate-900 tracking-tight animate-fade-up">
+                    The developer behind the <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600">code.</span>
+                </h1>
 
-      // Render Tech Marquee with Icons
-      const marqueeContainer = document.getElementById('tech-marquee');
-      if (marqueeContainer && PROFILE.skills) {
-        // Icon mapping for Devicon
-        const iconMap = {
-          'React': 'devicon-react-original colored',
-          'Vue.js': 'devicon-vuejs-plain colored',
-          'TypeScript': 'devicon-typescript-plain colored',
-          'Tailwind CSS': 'devicon-tailwindcss-original colored',
-          'Next.js': 'devicon-nextjs-original',
-          'Node.js': 'devicon-nodejs-plain colored',
-          'Python': 'devicon-python-plain colored',
-          'PostgreSQL': 'devicon-postgresql-plain colored',
-          'GraphQL': 'devicon-graphql-plain colored',
-          'Git': 'devicon-git-plain colored',
-          'Figma': 'devicon-figma-plain colored',
-          'Docker': 'devicon-docker-plain colored',
-          'AWS': 'devicon-amazonwebservices-original colored',
-          'MongoDB': 'devicon-mongodb-plain colored',
-          'REST APIs': 'devicon-network-plain',
-          'React Native': 'devicon-react-original colored',
-          'Firebase': 'devicon-firebase-plain colored',
-          'HTML': 'devicon-html5-plain colored',
-          'CSS': 'devicon-css3-plain colored',
-          'JavaScript': 'devicon-javascript-plain colored',
-          'Android (Java)': 'devicon-android-plain colored',
-          'iOS (Swift)': 'devicon-apple-original',
-          'Flutter': 'devicon-flutter-plain colored',
-          'Laravel': 'devicon-laravel-original colored',
-          'MySQL': 'devicon-mysql-plain colored',
-          'Postman': 'devicon-postman-plain colored',
-          'Android Studio': 'devicon-androidstudio-plain colored',
-          'Xcode': 'devicon-xcode-plain colored'
-        };
+                <div id="about-longBio"
+                    class="text-lg lg:text-xl text-slate-500 mb-10 leading-relaxed max-w-3xl mx-auto font-medium animate-fade-up"
+                    style="animation-delay: 0.1s;">
+                    <!-- Rendered by JS -->
+                </div>
 
-        const allSkills = PROFILE.skills.flatMap(cat => cat.items);
-        const tagsHtml = allSkills.map(skill => {
-          const iconClass = iconMap[skill];
-          const iconHtml = iconClass ? `<i class="${iconClass} text-lg"></i>` : '';
-          return `<span class="px-6 py-2 rounded-full bg-slate-800 text-slate-300 font-medium text-sm whitespace-nowrap flex items-center gap-2">${iconHtml} ${skill}</span>`;
-        }).join('');
-        
-        // Create identical blocks for mathematically perfect infinite scrolling
-        const oneSet = `<div class="flex items-center gap-8 pr-8 shrink-0">${tagsHtml}</div>`;
-        
-        marqueeContainer.innerHTML = `
+                <div class="flex flex-wrap justify-center gap-6 animate-fade-up" style="animation-delay: 0.2s;">
+                    <a href="#experience"
+                        class="bg-blue-600 text-white px-8 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 hover:shadow-xl hover:-translate-y-0.5">
+                        See my work history
+                    </a>
+                    <a href="#" id="download-cv"
+                        class="px-8 py-4 rounded-xl font-bold text-slate-700 hover:bg-slate-50 transition-all border border-slate-200 hover:border-slate-300 flex items-center gap-2">
+                        Download Resume
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ── Tech Marquee ── -->
+        <div class="bg-slate-950 text-white py-8 border-y border-slate-800/80 overflow-hidden relative z-20 shadow-xl">
+            <div class="marquee-container" id="tech-marquee">
+                <!-- Rendered by JS -->
+            </div>
+        </div>
+
+        <!-- Stats -->
+        <section class="py-16 md:py-20 lg:py-28 bg-white relative overflow-hidden">
+            <!-- Glow effect -->
+            <div
+                class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-3xl h-[400px] bg-blue-50 blur-[100px] rounded-full pointer-events-none">
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold text-slate-900 mb-4">By The Numbers</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto">A quick look at my professional journey and the
+                        milestones achieved along the way.</p>
+                </div>
+                <div id="stats-grid" class="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
+                    <!-- Rendered by JS -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience & Education -->
+        <section id="experience" class="py-16 md:py-24 bg-slate-50">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-16">
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-4 animate-on-scroll">
+                            <span
+                                class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center">💼</span>
+                            Work Experience
+                        </h2>
+                        <div id="experience-list"
+                            class="space-y-8 relative before:absolute before:inset-0 before:left-[19px] before:h-full before:w-0.5 before:bg-gradient-to-b before:from-blue-500 before:via-slate-200 before:to-transparent">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="text-3xl font-bold text-slate-900 mb-12 flex items-center gap-4 animate-on-scroll">
+                            <span
+                                class="w-12 h-12 bg-purple-100 text-purple-600 rounded-xl flex items-center justify-center">🎓</span>
+                            Education
+                        </h2>
+                        <div id="education-list" class="space-y-6">
+                            <!-- Rendered by JS -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="py-16 md:py-24 bg-slate-900 text-center px-4 relative overflow-hidden">
+            <!-- Glow effect -->
+            <div
+                class="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-blue-600/10 blur-[100px] rounded-full pointer-events-none">
+            </div>
+
+            <div class="max-w-3xl mx-auto animate-on-scroll relative z-10">
+                <span
+                    class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-slate-800/80 border border-slate-700/50 text-green-400 text-sm font-semibold mb-8 backdrop-blur-sm">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Currently available for freelance projects
+                </span>
+                <h2 class="text-4xl md:text-5xl font-black text-white mb-6">Let's build something great.</h2>
+                <p class="text-slate-400 text-lg mb-10 leading-relaxed">Whether it's a sleek mobile app, a scalable web
+                    platform, or just a quick consultation—I'm ready to bring your ideas to life.</p>
+                <a href="contact.html"
+                    class="inline-flex items-center gap-3 bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-500 transition-all shadow-lg shadow-blue-500/20 hover:shadow-blue-500/40 hover:-translate-y-1">
+                    Start a Conversation
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                            d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-50 py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-slate-200">
+                <p class="text-sm text-slate-400">&copy; <span id="current-year"></span> Trung Hieu Dinh. All rights
+                    reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="data/profile.js"></script>
+    <script src="data/projects.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+            document.getElementById('about-longBio').innerHTML = PROFILE.longBio;
+            document.getElementById('about-avatar').src = PROFILE.avatar;
+            document.getElementById('download-cv').href = PROFILE.cvLink;
+
+            // Render Tech Marquee with Icons
+            const marqueeContainer = document.getElementById('tech-marquee');
+            if (marqueeContainer && PROFILE.skills) {
+                // Icon mapping for Devicon
+                const iconMap = {
+                    'React': 'devicon-react-original colored',
+                    'Vue.js': 'devicon-vuejs-plain colored',
+                    'TypeScript': 'devicon-typescript-plain colored',
+                    'Tailwind CSS': 'devicon-tailwindcss-original colored',
+                    'Next.js': 'devicon-nextjs-original',
+                    'Node.js': 'devicon-nodejs-plain colored',
+                    'Python': 'devicon-python-plain colored',
+                    'PostgreSQL': 'devicon-postgresql-plain colored',
+                    'GraphQL': 'devicon-graphql-plain colored',
+                    'Git': 'devicon-git-plain colored',
+                    'Figma': 'devicon-figma-plain colored',
+                    'Docker': 'devicon-docker-plain colored',
+                    'AWS': 'devicon-amazonwebservices-original colored',
+                    'MongoDB': 'devicon-mongodb-plain colored',
+                    'REST APIs': 'devicon-network-plain',
+                    'React Native': 'devicon-react-original colored',
+                    'Firebase': 'devicon-firebase-plain colored',
+                    'HTML': 'devicon-html5-plain colored',
+                    'CSS': 'devicon-css3-plain colored',
+                    'JavaScript': 'devicon-javascript-plain colored',
+                    'Android (Java)': 'devicon-android-plain colored',
+                    'iOS (Swift)': 'devicon-apple-original',
+                    'Flutter': 'devicon-flutter-plain colored',
+                    'Laravel': 'devicon-laravel-original colored',
+                    'MySQL': 'devicon-mysql-plain colored',
+                    'Postman': 'devicon-postman-plain colored',
+                    'Android Studio': 'devicon-androidstudio-plain colored',
+                    'Xcode': 'devicon-xcode-plain colored'
+                };
+
+                const allSkills = PROFILE.skills.flatMap(cat => cat.items);
+                const tagsHtml = allSkills.map(skill => {
+                    const iconClass = iconMap[skill];
+                    const iconHtml = iconClass ? `<i class="${iconClass} text-lg"></i>` : '';
+                    return `<span class="px-6 py-2 rounded-full bg-slate-800 text-slate-300 font-medium text-sm whitespace-nowrap flex items-center gap-2">${iconHtml} ${skill}</span>`;
+                }).join('');
+
+                // Create identical blocks for mathematically perfect infinite scrolling
+                const oneSet = `<div class="flex items-center gap-8 pr-8 shrink-0">${tagsHtml}</div>`;
+
+                marqueeContainer.innerHTML = `
           <div class="marquee-content">
             ${oneSet}
             ${oneSet}
           </div>
         `;
-      }
+            }
 
-      // Stats
-      const statsGrid = document.getElementById('stats-grid');
-      PROFILE.stats.forEach((s, i) => {
-        const div = document.createElement('div');
-        div.className = `bg-white p-8 lg:p-10 rounded-3xl text-center border border-slate-100 hover:border-blue-100 hover:bg-blue-50/30 hover:-translate-y-1 transition-all shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-blue-200/50 animate-fade-up stagger-${i+1}`;
-        div.innerHTML = `
+            // Stats
+            const statsGrid = document.getElementById('stats-grid');
+            PROFILE.stats.forEach((s, i) => {
+                const div = document.createElement('div');
+                div.className = `bg-white p-6 md:p-8 lg:p-10 rounded-3xl text-center border border-slate-100 hover:border-blue-100 hover:bg-blue-50/30 hover:-translate-y-1 transition-all shadow-lg shadow-slate-200/50 hover:shadow-xl hover:shadow-blue-200/50 animate-fade-up stagger-${i + 1}`;
+                div.innerHTML = `
           <h3 class="text-4xl lg:text-5xl font-black text-transparent bg-clip-text bg-gradient-to-br from-blue-600 to-purple-600 mb-4">${s.value}</h3>
           <p class="text-sm font-bold text-slate-500 uppercase tracking-widest">${s.label}</p>
         `;
-        statsGrid.appendChild(div);
-      });
+                statsGrid.appendChild(div);
+            });
 
-      // Experience
-      const expList = document.getElementById('experience-list');
-      PROFILE.experience.forEach((exp, i) => {
-        expList.innerHTML += `
-          <div class="relative pl-14 md:pl-16 animate-fade-left stagger-${i+1}">
+            // Experience — reverse để mới nhất lên trên cùng timeline
+            const expList = document.getElementById('experience-list');
+            [...PROFILE.experience].reverse().forEach((exp, i) => {
+                expList.innerHTML += `
+          <div class="relative pl-14 md:pl-16 animate-fade-left stagger-${i + 1}">
             <div class="absolute left-0 top-1 w-10 h-10 bg-white border-2 border-blue-500 rounded-full flex items-center justify-center shadow-sm z-10">
               <div class="w-3 h-3 ${exp.isCurrent ? 'bg-blue-600 animate-pulse' : 'bg-slate-300'} rounded-full"></div>
             </div>
@@ -245,25 +290,30 @@
             </div>
           </div>
         `;
-      });
+            });
 
-      // Education
-      const eduList = document.getElementById('education-list');
-      PROFILE.education.forEach((edu, i) => {
-        eduList.innerHTML += `
-          <div class="animate-fade-right stagger-${i+1} flex gap-6 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
-            <div class="w-14 h-14 bg-slate-50 border border-slate-100 rounded-xl flex items-center justify-center font-black text-slate-400 flex-shrink-0">
-              ${edu.icon}
+            // Education
+            const eduList = document.getElementById('education-list');
+            PROFILE.education.forEach((edu, i) => {
+                eduList.innerHTML += `
+          <div class="animate-fade-right stagger-${i + 1} flex gap-6 bg-white p-6 rounded-2xl border border-slate-100 shadow-sm hover:shadow-md transition-all">
+            <div class="w-14 h-14 bg-white border border-slate-100 rounded-xl flex items-center justify-center flex-shrink-0 overflow-hidden p-1">
+              ${edu.iconImg
+                ? `<img src="${edu.iconImg}" alt="${edu.institution}" class="w-full h-full object-contain">`
+                : `<span class="font-black text-slate-400 text-sm">${edu.icon}</span>`
+              }
             </div>
             <div>
               <p class="text-xs font-bold text-slate-400 uppercase tracking-widest mb-1">${edu.period}</p>
               <h4 class="text-lg font-bold text-slate-900 mb-1">${edu.title}</h4>
               <p class="text-slate-500 text-sm">${edu.institution}</p>
+              ${edu.detail ? `<p class="text-blue-500 text-xs font-medium mt-1">${edu.detail}</p>` : ''}
             </div>
           </div>
         `;
-      });
-    });
-  </script>
+            });
+        });
+    </script>
 </body>
+
 </html>

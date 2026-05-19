@@ -79,7 +79,7 @@
 
     <main>
         <!-- ── Hero ── -->
-        <section class="relative py-20 lg:py-32 overflow-hidden bg-slate-50">
+        <section class="relative py-20 lg:py-32 overflow-hidden bg-white">
             <!-- Animated blobs -->
             <div class="parallax-blob absolute inset-0 pointer-events-none">
                 <div class="hero-blob hero-blob-1"></div>
@@ -122,7 +122,8 @@
                 </div>
 
                 <!-- Right: floating image -->
-                <div class="relative group" style="animation: fadeInRight 0.7s ease 0.2s forwards; opacity: 0;">
+                <div class="relative group mx-6 sm:mx-12 lg:mx-0"
+                    style="animation: fadeInRight 0.7s ease 0.2s forwards; opacity: 0;">
                     <div
                         class="absolute -inset-4 bg-gradient-to-br from-blue-100 to-purple-100 rounded-3xl -rotate-3 transition-transform group-hover:rotate-0 duration-500">
                     </div>
@@ -133,7 +134,7 @@
         </section>
 
         <!-- ── About ── -->
-        <section id="about" class="py-16 md:py-24 bg-white">
+        <section id="about" class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid lg:grid-cols-2 gap-20 items-start">
                     <div class="animate-fade-left">
@@ -151,7 +152,7 @@
         </section>
 
         <!-- ── Skills ── -->
-        <section class="py-16 md:py-24 bg-slate-50/50">
+        <section class="py-24 bg-slate-50/50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mb-16">
                 <h2 class="animate-on-scroll text-3xl font-bold text-slate-900 mb-4">Technical Skills</h2>
                 <p class="animate-on-scroll stagger-1 text-slate-500">The tools and technologies I use to bring ideas to
@@ -164,7 +165,7 @@
         </section>
 
         <!-- ── Featured Projects ── -->
-        <section class="py-16 md:py-24 bg-white">
+        <section class="py-24 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-end mb-16">
                 <div class="animate-fade-left">
                     <h2 class="text-3xl font-bold text-slate-900 mb-4">Featured Projects</h2>
@@ -187,7 +188,7 @@
         </section>
 
         <!-- ── Contact CTA ── -->
-        <section id="contact" class="py-16 md:py-24 bg-slate-50">
+        <section id="contact" class="py-24 bg-slate-50">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div
                     class="animate-on-scroll bg-white rounded-[2rem] overflow-hidden shadow-2xl border border-slate-100 grid lg:grid-cols-[2fr_3fr]">
@@ -264,29 +265,31 @@
                     </div>
                     <!-- Right: form -->
                     <div class="p-7 md:p-12 lg:p-16">
-                        <form class="space-y-6">
+                        <form class="space-y-6" data-contact-form>
+                            <input type="checkbox" name="botcheck" class="hidden" tabindex="-1" autocomplete="off">
                             <div class="grid sm:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label class="text-sm font-bold text-slate-700">Name</label>
-                                    <input type="text" placeholder="John Doe"
+                                    <input required type="text" name="name" placeholder="John Doe"
                                         class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
                                 </div>
                                 <div class="space-y-2">
                                     <label class="text-sm font-bold text-slate-700">Email</label>
-                                    <input type="email" placeholder="john@example.com"
+                                    <input required type="email" name="email" placeholder="john@example.com"
                                         class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
                                 </div>
                             </div>
                             <div class="space-y-2">
                                 <label class="text-sm font-bold text-slate-700">Subject</label>
-                                <input type="text" placeholder="Project Inquiry"
+                                <input required type="text" name="subject" placeholder="Project Inquiry"
                                     class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all" />
                             </div>
                             <div class="space-y-2">
                                 <label class="text-sm font-bold text-slate-700">Message</label>
-                                <textarea rows="6" placeholder="Tell me about your project..."
+                                <textarea required rows="6" name="message" placeholder="Tell me about your project..."
                                     class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all resize-none"></textarea>
                             </div>
+                            <p class="hidden text-sm font-medium" data-form-status></p>
                             <button type="submit"
                                 class="pulse-glow w-full sm:w-auto bg-blue-600 text-white px-10 py-4 rounded-xl font-bold hover:bg-blue-700 transition-all shadow-lg shadow-blue-200 flex items-center justify-center gap-2">
                                 Send Message
@@ -422,7 +425,7 @@
             PROFILE.skills.forEach((cat, i) => {
                 const div = document.createElement('div');
                 // Khung nhỏ hơn, giữ bóng xịn
-                div.className = `animate-fade-left stagger-${i + 1} relative bg-white p-6 md:p-8 rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-200/30 hover:shadow-2xl hover:shadow-blue-200/40 hover:-translate-y-2 transition-all duration-500 overflow-hidden group`;
+                div.className = `animate-fade-left stagger-${i + 1} relative bg-white p-8 rounded-3xl border border-slate-200/60 shadow-xl shadow-slate-200/30 hover:shadow-2xl hover:shadow-blue-200/40 hover:-translate-y-2 transition-all duration-500 overflow-hidden group`;
 
                 // Vệt sáng rõ ràng hơn (blue/purple)
                 const decorativeBg = `<div class="absolute -right-16 -top-16 w-48 h-48 bg-gradient-to-br from-blue-400/20 to-purple-400/20 rounded-full blur-3xl group-hover:scale-[2] transition-transform duration-700 pointer-events-none"></div>`;
