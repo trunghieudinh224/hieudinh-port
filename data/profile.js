@@ -5,15 +5,15 @@
  */
 const PROFILE = {
     name: 'Trung Hieu Dinh',            // ← Tên của bạn
-    role: 'Web & Mobile Developer',
-    tagline: 'Building accessible, pixel-perfect web experiences.',
-    shortBio: "Hi, I’m Trung Hieu Dinh. A passionate Web & Mobile Developer focused on building high-performance applications and intuitive digital experiences.",
+    role: 'Fullstack Web Developer & Sub-leader',
+    tagline: 'Building production web systems from business requirements to deployment.',
+    shortBio: "Hi, I’m Trung Hieu Dinh — a Fullstack Web Developer and Sub-leader focused on building reliable production systems, business workflows, and polished digital experiences.",
     bio: [
-        'With over 5 years of experience as a Web and Mobile Developer, I focus on building practical digital products that combine performance, usability, and real business value. My work spans across web and mobile solutions, creating user-centered experiences that are both reliable and impactful.',
-        "I have developed and contributed to a range of projects including E-commerce platforms, POS systems, booking applications, and business dashboards — always with an emphasis on delivering intuitive solutions that solve real-world problems."
+        'With over 5 years of experience across web and mobile development, I build production systems that combine reliable backend workflows, responsive interfaces, and practical business value.',
+        'My work includes booking and studio operations platforms, e-commerce, B2B portals, POS systems, internal enterprise tools, automation, and local media tooling. I own delivery from requirements and architecture through implementation, testing, deployment, and production hardening.'
     ],
-    longBio: `With over five years of experience across web and mobile development, I've built and shipped products across a range of industries — from e-commerce platforms and point-of-sale systems to booking applications and financial dashboards.
-My work sits at the intersection of frontend precision and full-stack thinking. I care about building things that are reliable under the hood and polished on the surface — products that hold up in production and feel right to use.
+    longBio: `With over five years of experience across web and mobile development, I've built and shipped production systems for clients and teams in Vietnam, Japan, the United States, and Australia — from booking and studio operations platforms to e-commerce, B2B portals, POS systems, internal enterprise tools, and automation.
+    My work sits at the intersection of backend reliability, frontend precision, and practical delivery. I care about clear architecture, business-rule correctness, production testing, deployment safety, and interfaces that feel right to use. In July 2026, I was promoted to Sub-leader while continuing hands-on web systems development.
   <br><br>
   I'm continuously learning and evolving — driven by a genuine curiosity for what good software can look like.`,
 
@@ -30,32 +30,31 @@ My work sits at the intersection of frontend precision and full-stack thinking. 
     },
     location: 'Ho Chi Minh City, VN',
     github: 'https://github.com/trunghieudinh224',  // ← Link GitHub
-    linkedin: 'https://www.facebook.com/dth2204/', // ← Dùng Facebook thay LinkedIn
     facebook: 'https://www.facebook.com/dth2204/',
     cvLink: 'cv/Trung_Hieu_Dinh_CV.pdf',  // ← Link CV/Resume của bạn
     avatar: 'assets/images/port-ava.JPG',
 
     // Trang Home: 3 điểm mạnh
     strengths: [
-        { icon: '⚡', title: 'Performance First', desc: 'Fast load times, optimized code — because speed is a feature' },
-        { icon: '🔧', title: 'Full-Stack Capable', desc: 'From database to UI, I handle the full product — no handoff gaps' },
-        { icon: '📱', title: 'Cross-Platform Ready', desc: 'Web and mobile from a single team — consistent quality across both' },
+        { icon: '🏗️', title: 'Production Systems', desc: 'Business-critical workflows designed for reliability, auditability, and real operations' },
+        { icon: '🔧', title: 'End-to-End Delivery', desc: 'Requirements, architecture, backend, UI, testing, deployment, and production hardening' },
+        { icon: '🧭', title: 'Technical Leadership', desc: 'Hands-on development with project coordination, review, and team delivery responsibility' },
     ],
 
     // Trang About: Thống kê
     stats: [
         { label: 'Years of Experience', value: '5+' },
         { label: 'Projects Shipped', value: '20+' },
-        { label: 'Technologies Used', value: '15+' },
-        { label: 'Total Commits', value: '2,000+' },
+        { label: 'Markets Served', value: '4' },
+        { label: 'Current Team Role', value: 'Sub-leader' },
     ],
 
     // Trang About:
 
     skills: [
-        { title: 'Frontend', icon: '💻', items: ['HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'React'] },
-        { title: 'Mobile', icon: '📱', items: ['Android (Java)', 'iOS (Swift)', 'Flutter'] },
-        { title: 'Backend', icon: '🗄️', items: ['Node.js', 'Laravel', 'MySQL', 'MongoDB', 'Firebase'] },
+        { title: 'Frontend', icon: '💻', items: ['HTML', 'CSS', 'Tailwind CSS', 'JavaScript', 'React', 'Blade'] },
+        { title: 'Backend & Data', icon: '🗄️', items: ['PHP', 'Laravel', 'Node.js', 'Python', 'FastAPI', 'MySQL', 'SQLite', 'REST APIs'] },
+        { title: 'Mobile & Delivery', icon: '🚀', items: ['Android (Java)', 'iOS (Swift)', 'Flutter', 'Docker', 'Nginx', 'Linux VPS', 'GitHub Actions', 'FFmpeg'] },
     ],
 
     // Kinh nghiệm làm việc (thứ tự cũ → mới; UI sẽ reverse để hiện mới nhất trên cùng)
@@ -81,15 +80,15 @@ My work sits at the intersection of frontend precision and full-stack thinking. 
             role: 'Freelance Fullstack Developer',
             company: 'Independent / Self-employed',
             location: 'Remote',
-            description: 'Built and shipped production web applications for clients across Vietnam, the US, and Australia. Projects include a nail salon booking platform (Laravel, US market), a B2B uniform ordering system (Fabrico, Australia), multiple e-commerce stores (Candle Shop, Blanco Floral, Kiến Đạo), a QR-based POS system (ProPOS), and an automated cryptocurrency trading bot (Python / FastAPI).',
+            description: 'Built and shipped production web applications for clients across Vietnam, the US, and Australia. Recent work includes the completed Rema Pilates booking and studio operations platform, a white-label US nail salon booking system, Fabrico B2B ordering, Laravel e-commerce platforms, ProPOS, and Hyper Video Tool for local MP4 presentation automation.',
             isCurrent: true,
         },
         {
             period: '2024 - PRESENT',
-            role: 'Web Systems Developer',
+            role: 'Web Systems Developer · Sub-leader',
             company: 'Marutou Compack Vietnam',
             location: 'Ho Chi Minh City, VN',
-            description: 'Leading the migration of legacy gas management desktop applications (Java / NetBeans) to modern web-based systems. Also architected and delivered internal web management platforms for Japanese manufacturing companies and enterprises — covering asset tracking, operations workflows, and reporting dashboards.',
+            description: 'Promoted to Sub-leader in July 2026 while continuing hands-on web systems development. Leading the migration of legacy Java / NetBeans gas management applications to modern web platforms and delivering internal systems for Japanese manufacturing and enterprise workflows, including asset tracking, operations, and reporting dashboards.',
             isCurrent: true,
         },
     ],

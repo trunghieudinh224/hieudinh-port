@@ -94,8 +94,8 @@
                             </div>
                         </a>
 
-                        <!-- LinkedIn Card -->
-                        <a href="#" id="card-linkedin" target="_blank"
+                        <!-- Facebook Card -->
+                        <a href="#" id="card-facebook" target="_blank"
                             class="bg-white p-5 rounded-2xl border border-slate-100 shadow-sm flex items-center gap-5 hover:shadow-md transition-all group">
                             <div
                                 class="w-12 h-12 bg-blue-50 text-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform">
@@ -106,8 +106,8 @@
                                 </svg>
                             </div>
                             <div>
-                                <h4 class="font-bold text-slate-900">LinkedIn</h4>
-                                <p class="text-slate-500 text-sm">Connect professionally</p>
+                                <h4 class="font-bold text-slate-900">Facebook</h4>
+                                <p class="text-slate-500 text-sm">Connect and discuss a project</p>
                             </div>
                         </a>
 
@@ -179,15 +179,15 @@
         </div>
     </footer>
 
-    <script src="data/profile.js"></script>
-    <script src="assets/js/main.js"></script>
+    <script src="data/profile.js?v=3"></script>
+    <script src="assets/js/main.js?v=3"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             document.getElementById('current-year').textContent = new Date().getFullYear();
 
             document.getElementById('text-email').textContent = PROFILE.email;
             document.getElementById('card-email').href = `mailto:${PROFILE.email}`;
-            document.getElementById('card-linkedin').href = PROFILE.linkedin;
+            document.getElementById('card-facebook').href = PROFILE.facebook;
             document.getElementById('card-github').href = PROFILE.github;
         });
     </script>

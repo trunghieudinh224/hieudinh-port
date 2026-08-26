@@ -5,7 +5,54 @@
  */
 const PROJECTS = [
   // ─────────────────────────────────────────
-  // 1. CANDLE SHOP — E-Commerce Platform
+  // 1. REMA PILATES — Booking & Studio Operations Platform
+  // ─────────────────────────────────────────
+  {
+    id: 'rema-pilates',
+    title: 'Rema Pilates',
+    description: 'A production-ready bilingual marketing, booking, and studio operations platform for Rema Pilates, covering room and equipment scheduling, payments, customer self-service, events, CRM, reporting, and smart-lock access workflows.',
+    category: 'web',
+    tags: ['Laravel', 'PHP', 'MySQL', 'Booking System', 'TTLock'],
+    image: 'assets/images/projects/rema-pilates/home.png',
+    role: 'Fullstack Developer',
+    timeline: 'Completed (2026)',
+    type: 'Booking & Operations Platform',
+    platform: 'Web (Responsive)',
+    overview: 'Rema Pilates is the official production website and operating system for a private Pilates and yoga studio in An Khánh, Ho Chi Minh City. It combines a bilingual marketing experience with online booking, payments, member self-service, studio administration, and day-to-day operational automation.',
+    longDescription: 'I built and delivered the full system from public experience through production operations: responsive VI/EN pages, availability-aware booking, customer accounts, events and workshops, payment and refund workflows, CRM, CMS, reporting, capability-based administration, scheduled notifications, deployment tooling, and TTLock smart-access integration.',
+    challenge: 'The core challenge was keeping availability, payment state, cancellation policy, personnel permissions, and physical access consistent across concurrent booking and event workflows in a production environment.',
+    solution: 'Implemented service and repository layers with transactional resource locking, idempotent payment settlement, immutable refund decision records, capability-based access control, scheduled lifecycle jobs, and reconciled TTLock access-code delivery for confirmed paid bookings.',
+    features: [
+      'Responsive bilingual marketing website (Vietnamese / English) with SEO-managed content',
+      'Availability-aware booking for studios, Reformer equipment, and optional trainer support',
+      'Guest booking lookup, customer accounts, member schedule, self-cancel, and reviews',
+      'VietQR / SePay settlement flow with idempotent webhook handling and payment reconciliation',
+      'Events and workshops with registration, payment, cancellation, and refund workflows',
+      'Admin portal with bookings, customers, content, services, trainers, payments, invoices, and reports',
+      'Capability-based personnel roles and permission enforcement across routes, APIs, and UI',
+      'Automated confirmation, reminder, expiry, feedback, and admin notification schedules',
+      'TTLock integration for time-bound smart-door access and unlock-history reconciliation',
+      'Production deployment, health checks, scheduler verification, SEO audits, and regression tests',
+    ],
+    technologies: [
+      'Laravel 13', 'PHP 8.4', 'MySQL',
+      'Blade', 'Vanilla JavaScript', 'Vanilla CSS',
+      'Laravel Socialite', 'Laravel Scheduler',
+      'SePay', 'VietQR', 'TTLock Open Platform',
+      'Axios', 'Vite', 'Nginx', 'Hostinger VPS',
+      'PHPUnit', 'Node.js Test Runner', 'Lighthouse',
+    ],
+    gallery: [
+      { url: 'assets/images/projects/rema-pilates/home.png', title: 'Official Rema Pilates Homepage' },
+      { url: 'assets/images/projects/rema-pilates/booking.png', title: 'Five-step Studio Booking Flow' },
+      { url: 'assets/images/projects/rema-pilates/services.png', title: 'Rooms & Equipment Experience' },
+    ],
+    liveLink: 'https://remapilates.com/',
+    repoLink: '',
+  },
+
+  // ─────────────────────────────────────────
+  // 2. CANDLE SHOP — E-Commerce Platform
   // ─────────────────────────────────────────
   {
     id: 'candle-shop',
@@ -60,51 +107,55 @@ const PROJECTS = [
   },
 
   // ─────────────────────────────────────────
-  // 2. ProPOS — Fastfood POS System
+  // 3. NAIL SALON — Booking & Management Web
   // ─────────────────────────────────────────
   {
-    id: 'propos-fastfood',
-    title: 'ProPOS — Fastfood POS',
-    description: 'A QR-based point-of-sale system for fast-food restaurants, featuring three portals: a customer-facing ordering web app, a staff management portal, and an owner analytics dashboard.',
+    id: 'nail-salon-booking',
+    title: 'Nail Salon Booking Web',
+    description: 'A white-label booking and management web platform for US nail salons, featuring a 5-step booking flow with staff selection, calendar availability, admin appointment management, and a full CMS for content and gallery.',
     category: 'web',
-    tags: ['Laravel', 'PHP', 'MySQL', 'QR Code', 'KDS'],
-    image: 'assets/images/projects/propos-fastfood/customer/ipad-landscape-menu.png',
+    tags: ['Laravel', 'PHP', 'MySQL', 'Booking System', 'Admin Panel'],
+    image: 'assets/images/projects/nail-salon-booking/client/home.png',
     role: 'Fullstack Developer',
     timeline: 'Ongoing (2026)',
-    type: 'POS System',
+    type: 'Service Booking Platform',
     platform: 'Web (Mobile-first)',
-    overview: 'ProPOS is a modern restaurant point-of-sale system designed for fast-food operations. Instead of traditional terminals, customers scan a QR code at their table and place orders directly from their phones — no app installation required.',
-    longDescription: 'The system operates across three distinct portals: the Client Web App (table-based ordering via QR), the Staff Portal (table map, Kitchen Display System), and the Owner Dashboard (menu management, staff accounts, revenue reports). The architecture supports multi-role access with role-based permissions baked into the middleware layer.',
-    challenge: 'Designing a real-time, multi-portal system where customer orders, kitchen display, and owner reports all stay in sync — without complex infrastructure.',
-    solution: 'Built a unified Laravel backend serving three separate route groups, with role-based middleware controlling access. QR tokens map directly to table sessions, and the KDS updates live via polling.',
+    overview: 'A white-label nail salon website and booking system built for the US market. Each salon gets its own standalone deployment — no shared infrastructure. The platform covers everything from public storefront and online booking to admin appointment management and customer CRM.',
+    longDescription: 'I architected and built the full platform from the ground up — a modern minimalist spa UI with rose-gold accents, a multi-step booking wizard with real-time slot availability, a comprehensive admin panel, and automated background jobs for reminders and appointment lifecycle. The system supports a licensed Staff Selection feature for salons that want clients to choose their preferred technician, with intelligent multi-staff conflict detection for back-to-back service chains.',
+    challenge: 'Designing a booking flow that correctly handles sequential multi-service appointments — where each service can be assigned a different staff, each staff has their own schedule and break times, and all slots must be contiguously available across the full chain.',
+    solution: 'Built a dedicated slot-availability API that computes valid date/time combinations by checking all staff schedules in sequence. Implemented a BookingSubmissionService with transactional conflict detection to prevent race conditions at submission time. Appointment status and email notifications are managed at the booking level, not per service line.',
     features: [
-      'QR-based customer ordering — no login or app required',
-      'Interactive menu with category navigation and cart animations',
-      'Order Detail popup showing current & confirmed order groups',
-      'Staff Portal: table map with status colors, open/close table flow',
-      'Kitchen Display System (KDS) for live ticket management',
-      'Owner Dashboard: CRUD for menu, tables, and staff accounts',
-      'Revenue reports by day / month with best-selling item analytics',
-      'Tax and service fee configuration per restaurant',
-      'QR code generation and printing per table',
-      'Role system: Developer, Owner, Manager, Staff',
+      'Modern minimalist spa UI with rose-gold design system (mobile-first)',
+      '5-step booking wizard: Services → Staff → Date & Time → Info → Confirm',
+      'Multi-service booking with sequential staff assignment and conflict detection',
+      'Staff Selection license feature: clients choose preferred technician per service',
+      'Real-time slot availability API with multi-staff schedule awareness',
+      'Self-cancel flow through a secure booking token and configurable cancellation window',
+      'Admin calendar/list views, manual booking, rescheduling, and conflict warnings',
+      'Automated pending expiry, customer reminders, and urgent admin notifications',
+      'Gallery, content, testimonials, services, and technician profiles managed through CMS',
+      'Customer CRM with booking history, internal notes, and moderated reviews',
     ],
     technologies: [
       'Laravel 13', 'PHP 8.3', 'MySQL',
       'Blade', 'Vanilla JS', 'Vanilla CSS',
-      'asset_v() cache-busting', 'Hostinger',
+      'Playfair Display', 'Inter',
+      'Laravel Scheduler', 'Laravel Mail',
+      'Axios', 'Vite', 'Hostinger',
     ],
     gallery: [
-      { url: 'assets/images/projects/propos-fastfood/customer/ipad-landscape-menu.png', title: 'Customer Menu POS - iPad Landscape' },
-      { url: 'assets/images/projects/propos-fastfood/customer/ipad-landscape-order-popup.png', title: 'Order Detail Popup - iPad Landscape' },
-      { url: 'assets/images/projects/propos-fastfood/customer/ipad-landscape-qr-popup.png', title: 'Share Table QR Popup - iPad Landscape' },
+      { url: 'assets/images/projects/nail-salon-booking/client/home.png', title: 'Client Homepage — Modern Spa UI' },
+      { url: 'assets/images/projects/nail-salon-booking/client/services.png', title: 'Services & Pricing Page' },
+      { url: 'assets/images/projects/nail-salon-booking/client/booking.png', title: 'Booking Wizard — Services Step' },
+      { url: 'assets/images/projects/nail-salon-booking/client/gallery.png', title: 'Client Gallery Page' },
+      { url: 'assets/images/projects/nail-salon-booking/client/contact.png', title: 'Client Contact Page' },
     ],
-    liveLink: '',
+    liveLink: 'https://darkblue-dinosaur-881793.hostingersite.com/',
     repoLink: '',
   },
 
   // ─────────────────────────────────────────
-  // 3. TINHHOA — Event Management Platform (Static)
+  // 4. TINHHOA — Event Management Platform (Static)
   // ─────────────────────────────────────────
   {
     id: 'tinhhoa-event',
@@ -151,7 +202,7 @@ const PROJECTS = [
   },
 
   // ─────────────────────────────────────────
-  // 4. KIENDAO — Zen E-Commerce Platform
+  // 5. KIENDAO — Zen E-Commerce Platform
   // ─────────────────────────────────────────
   {
     id: 'kiendao',
@@ -196,7 +247,53 @@ const PROJECTS = [
   },
 
   // ─────────────────────────────────────────
-  // 5. WEBAPP FABRICO — B2B Uniform Ordering Platform
+  // 6. HYPER VIDEO TOOL — Local Video Automation
+  // ─────────────────────────────────────────
+  {
+    id: 'hyper-video-tool',
+    title: 'Hyper Video Tool',
+    description: 'A local-first video production tool that turns structured briefs, scripts, and media assets into reusable horizontal or vertical MP4 presentations with preview, voiceover, and persistent project history.',
+    category: 'tool',
+    tags: ['Node.js', 'SQLite', 'HyperFrames', 'FFmpeg', 'Video Automation'],
+    image: 'assets/images/projects/hyper-video-tool/overview.png',
+    role: 'Solo Fullstack Developer',
+    timeline: 'Active Development (2026)',
+    type: 'Local Video Automation Tool',
+    platform: 'Desktop / Local Web App',
+    overview: 'Hyper Video Tool helps technical teams turn feature briefs, workflows, dashboards, reports, and project handoffs into reusable presentation videos without editing template code by hand.',
+    longDescription: 'I designed and built a multi-page local web application with a Node.js backend, SQLite persistence, project snapshots, asset management, scene scripting, reusable video templates, preview, asynchronous render jobs, voiceover generation, and output history. The tool renders real MP4 files locally through HyperFrames and FFmpeg.',
+    challenge: 'The main challenge was converting flexible project content into deterministic video payloads while keeping previews, templates, media settings, voiceover, project history, and final render output synchronized.',
+    solution: 'Built a local-first architecture with SQLite as the source of truth, JSON project snapshots for flexible content, schema-validated render payloads, a single-worker asynchronous render queue, render preflight checks, and manifest-backed MP4 output recovery.',
+    features: [
+      'Multi-project persistence with load, duplicate, archive, and manual snapshots',
+      'Structured video brief, content type, language, aspect ratio, FPS, and output settings',
+      'Asset manager for images, video, audio, and project-specific media metadata',
+      'Scene-based script editor and reusable presentation templates',
+      'Horizontal 16:9 and vertical 9:16 preview and rendering workflows',
+      'Asynchronous HyperFrames render jobs with progress polling and preflight checks',
+      'Local voiceover generation in Vietnamese, English, and Japanese through Edge TTS',
+      'Media composition and final MP4 muxing with FFmpeg',
+      'Persistent render history, output metadata, playback, and download',
+      'Automated syntax, API, storage, voiceover, media, and render-payload checks',
+    ],
+    technologies: [
+      'Node.js', 'SQLite',
+      'HTML5', 'Vanilla JavaScript', 'Vanilla CSS',
+      'HyperFrames', 'GSAP',
+      'FFmpeg', 'FFprobe', 'Edge TTS',
+      'Busboy', 'REST APIs',
+    ],
+    gallery: [
+      { url: 'assets/images/projects/hyper-video-tool/overview.png', title: 'Project Overview & Readiness Dashboard' },
+      { url: 'assets/images/projects/hyper-video-tool/content.png', title: 'Video Brief & Media Settings' },
+      { url: 'assets/images/projects/hyper-video-tool/render.png', title: 'Render Preflight & Async Job Screen' },
+    ],
+    liveLink: '',
+    repoLink: '',
+  },
+
+  // ─────────────────────────────────────────
+  // 7. WEBAPP FABRICO — B2B Uniform Ordering Platform
   // ─────────────────────────────────────────
   {
     id: 'webapp-fabrico',
@@ -245,61 +342,51 @@ const PROJECTS = [
   },
 
   // ─────────────────────────────────────────
-  // 6. NAIL SALON — Booking & Management Web
+  // 8. ProPOS — Fastfood POS System
   // ─────────────────────────────────────────
   {
-    id: 'nail-salon-booking',
-    title: 'Nail Salon Booking Web',
-    description: 'A white-label booking and management web platform for US nail salons, featuring a 5-step booking flow with staff selection, calendar availability, admin appointment management, and a full CMS for content and gallery.',
+    id: 'propos-fastfood',
+    title: 'ProPOS — Fastfood POS',
+    description: 'A QR-based point-of-sale system for fast-food restaurants, featuring three portals: a customer-facing ordering web app, a staff management portal, and an owner analytics dashboard.',
     category: 'web',
-    tags: ['Laravel', 'PHP', 'MySQL', 'Booking System', 'Admin Panel'],
-    image: 'assets/images/projects/nail-salon-booking/client/home.png',
+    tags: ['Laravel', 'PHP', 'MySQL', 'QR Code', 'KDS'],
+    image: 'assets/images/projects/propos-fastfood/customer/ipad-landscape-menu.png',
     role: 'Fullstack Developer',
     timeline: 'Ongoing (2026)',
-    type: 'Service Booking Platform',
+    type: 'POS System',
     platform: 'Web (Mobile-first)',
-    overview: 'A white-label nail salon website and booking system built for the US market. Each salon gets its own standalone deployment — no shared infrastructure. The platform covers everything from public storefront and online booking to admin appointment management and customer CRM.',
-    longDescription: 'I architected and built the full platform from the ground up — a modern minimalist spa UI with rose-gold accents, a multi-step booking wizard with real-time slot availability, a comprehensive admin panel, and automated background jobs for reminders and appointment lifecycle. The system supports a licensed Staff Selection feature for salons that want clients to choose their preferred technician, with intelligent multi-staff conflict detection for back-to-back service chains.',
-    challenge: 'Designing a booking flow that correctly handles sequential multi-service appointments — where each service can be assigned a different staff, each staff has their own schedule and break times, and all slots must be contiguously available across the full chain.',
-    solution: 'Built a dedicated slot-availability API that computes valid date/time combinations by checking all staff schedules in sequence. Implemented a BookingSubmissionService with transactional conflict detection to prevent race conditions at submission time. Appointment status and email notifications are managed at the booking level, not per service line.',
+    overview: 'ProPOS is a modern restaurant point-of-sale system designed for fast-food operations. Instead of traditional terminals, customers scan a QR code at their table and place orders directly from their phones — no app installation required.',
+    longDescription: 'The system operates across three distinct portals: the Client Web App (table-based ordering via QR), the Staff Portal (table map, Kitchen Display System), and the Owner Dashboard (menu management, staff accounts, revenue reports). The architecture supports multi-role access with role-based permissions baked into the middleware layer.',
+    challenge: 'Designing a real-time, multi-portal system where customer orders, kitchen display, and owner reports all stay in sync — without complex infrastructure.',
+    solution: 'Built a unified Laravel backend serving three separate route groups, with role-based middleware controlling access. QR tokens map directly to table sessions, and the KDS updates live via polling.',
     features: [
-      'Modern minimalist spa UI with rose-gold design system (mobile-first)',
-      '5-step booking wizard: Services → Staff → Date & Time → Info → Confirm',
-      'Multi-service booking with sequential staff assignment and conflict detection',
-      'Staff Selection license feature: clients choose preferred technician per service',
-      'Real-time slot availability API with multi-staff schedule awareness',
-      'Self-cancel flow: customers cancel with reason via booking token, subject to cancel_hours_limit',
-      'Admin: Calendar and List views for appointments, manual create, reschedule, conflict warning',
-      'Auto-expire pending appointments + 24h customer reminder emails (timezone-aware)',
-      'Admin Urgent Reminder: notifies admin 60 min before pending appointments expire',
-      'Gallery with category filter, lightbox, and CMS upload/replace',
-      'Inspiration section: Gallery Collections, Nail Art Guides, Studio Strip — all CMS-managed',
-      'Content Management: Hero, Why Choose Us (icon picker), Featured Services, Testimonials',
-      'Customer CRM: auto-synced from bookings, appointment history, internal notes',
-      'Customer Reviews: post-service ratings, admin moderation (show/hide)',
-      'Technician profiles: specialties, schedules, assigned services',
+      'QR-based customer ordering — no login or app required',
+      'Interactive menu with category navigation and cart animations',
+      'Order Detail popup showing current and confirmed order groups',
+      'Staff Portal with table map and open/close table workflows',
+      'Kitchen Display System (KDS) for live ticket management',
+      'Owner Dashboard for menu, tables, staff accounts, and operations settings',
+      'Revenue reports by day/month with best-selling item analytics',
+      'Tax and service fee configuration per restaurant',
+      'QR code generation and printing per table',
+      'Role system for Developer, Owner, Manager, and Staff',
     ],
     technologies: [
       'Laravel 13', 'PHP 8.3', 'MySQL',
       'Blade', 'Vanilla JS', 'Vanilla CSS',
-      'Playfair Display', 'Inter',
-      'asset_v() cache-busting',
-      'Laravel Scheduler', 'Laravel Mail',
-      'Axios', 'Vite', 'Hostinger',
+      'asset_v() cache-busting', 'Hostinger',
     ],
     gallery: [
-      { url: 'assets/images/projects/nail-salon-booking/client/home.png', title: 'Client Homepage — Modern Spa UI' },
-      { url: 'assets/images/projects/nail-salon-booking/client/services.png', title: 'Services & Pricing Page' },
-      { url: 'assets/images/projects/nail-salon-booking/client/booking.png', title: 'Booking Wizard — Services Step' },
-      { url: 'assets/images/projects/nail-salon-booking/client/gallery.png', title: 'Client Gallery Page' },
-      { url: 'assets/images/projects/nail-salon-booking/client/contact.png', title: 'Client Contact Page' },
+      { url: 'assets/images/projects/propos-fastfood/customer/ipad-landscape-menu.png', title: 'Customer Menu POS - iPad Landscape' },
+      { url: 'assets/images/projects/propos-fastfood/customer/ipad-landscape-order-popup.png', title: 'Order Detail Popup - iPad Landscape' },
+      { url: 'assets/images/projects/propos-fastfood/customer/ipad-landscape-qr-popup.png', title: 'Share Table QR Popup - iPad Landscape' },
     ],
-    liveLink: 'https://darkblue-dinosaur-881793.hostingersite.com/',
+    liveLink: '',
     repoLink: '',
   },
 
   // ─────────────────────────────────────────
-  // 7. MEMORY CHALLENGE — Android Memory Game
+  // 9. MEMORY CHALLENGE — Android Memory Game
   // ─────────────────────────────────────────
   {
     id: 'memory-challenge',
@@ -346,42 +433,44 @@ const PROJECTS = [
   },
 
   // ─────────────────────────────────────────
-  // 8. CRYPTO TRADING BOT — Automated Trading System
+  // 10. CRYPTO TRADING BOT — Personal Engineering Project
   // ─────────────────────────────────────────
   {
     id: 'crypto-trading-bot',
     title: 'Crypto Trading Bot',
-    description: 'An automated multi-pair cryptocurrency trading bot combining Smart Money Concepts (SMC), Order Block analysis, and Support/Resistance detection — with a real-time web dashboard and Telegram alerts.',
+    description: 'A running personal engineering project for multi-pair Binance Futures market analysis and execution, featuring fixed-risk sizing, exchange-state reconciliation, research pipelines, a real-time dashboard, and Telegram notifications.',
     category: 'tool',
-    tags: ['Python', 'FastAPI', 'SQLite', 'Binance API', 'Telegram Bot'],
+    tags: ['Python', 'FastAPI', 'Binance API', 'Risk Engine', 'WebSockets'],
     image: 'https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=1470&auto=format&fit=crop',
     role: 'Solo Developer',
-    timeline: '3 Months',
-    type: 'Automation Tool',
+    timeline: 'Running / Active Development (2026)',
+    type: 'Personal Engineering Project',
     platform: 'Desktop / Web Dashboard',
-    overview: 'A Python-based trading bot that monitors multiple cryptocurrency pairs simultaneously using institutional trading methodologies — Smart Money Concepts (SMC), Order Blocks, and Support/Resistance levels — to detect high-probability trade setups.',
-    longDescription: 'The system runs as a background process scanning the market while serving a FastAPI web dashboard for monitoring. It integrates directly with the Binance API (Testnet and Mainnet) and pushes detailed trade signals to Telegram including entry price, stop-loss, take-profit, and a confidence score. Compatible with Python 3.12 with custom patches for Python 3.14.',
-    challenge: 'Running a continuous market scanner in the background while simultaneously serving a live web dashboard — without blocking I/O or crashing on startup with newer Python builds.',
-    solution: 'Used FastAPI with Uvicorn for the async web layer, with the bot running as a separate background thread. Added monkey-patches for Python 3.14 Numpy/Pandas compatibility issues on Windows.',
+    overview: 'A Python-based personal engineering project that runs continuously on a VPS, scans multiple Binance Futures pairs, evaluates structured market setups, manages execution risk, and exposes research and runtime state through a private FastAPI dashboard.',
+    longDescription: 'The current system goes beyond signal generation: it separates live runtime from local research, reconciles exchange and database state, enforces fixed-R risk rules, supports pending-zone execution, tracks shadow decisions, records market context and telemetry, and provides backtest, ablation, and hypothesis-validation tooling. The dashboard is intentionally private and accessed through an SSH tunnel.',
+    challenge: 'The hardest engineering problem is keeping local signal, order, position, and PnL state aligned with Binance under partial fills, stale data, empty position responses, restarts, and network failures without accidentally increasing exposure.',
+    solution: 'Implemented reduce-only close protection, fixed-risk position sizing, exchange trade-history reconciliation, mainnet trigger-price recovery, fail-closed runtime roles, database-backed operational settings, structured telemetry, and regression tests around execution and position lifecycle edge cases.',
     features: [
-      'Multi-pair scanning: monitor multiple crypto pairs simultaneously',
-      'SMC analysis: Smart Money Concepts signal detection',
-      'Order Block identification for institutional-level trade setups',
-      'Support & Resistance level calculation',
-      'Confidence score system for signal strength ranking',
-      'Binance API integration (Testnet + Mainnet)',
-      'Toggle between Signal Only mode and Auto-Trading mode',
-      'Real-time web dashboard with multi-chart view',
-      'Telegram Bot alerts with Entry, SL, TP, and confidence score',
-      'SQLite database for trade history and performance logs',
-      'Win rate tracking and performance analytics',
+      'Asynchronous multi-pair and multi-timeframe Binance Futures market scanning',
+      'SMC, Order Block, Support/Resistance, market-regime, and no-trade analysis',
+      'Fixed-risk position sizing with separate leverage and exposure caps',
+      'Pending setup-zone execution and active-position monitoring',
+      'Exchange/DB reconciliation for closes, partial state, and runtime recovery',
+      'Reduce-only close protection and audited signal/order/position lifecycle',
+      'Private real-time dashboard with analytics, signal detail, and multi-chart views',
+      'Telegram alerts for signals, execution, close events, and runtime incidents',
+      'Backtesting, portfolio validation, ablation studies, and hypothesis registry',
+      'Shadow runtime, market-context telemetry, and decision divergence analysis',
+      'VPS deployment with isolated runtime roles and SSH-tunneled dashboard access',
     ],
     technologies: [
       'Python 3.12', 'FastAPI', 'Uvicorn',
-      'Binance API', 'SQLite',
-      'Pandas', 'NumPy', 'CCXT',
-      'Telegram Bot API',
-      'HTML/CSS/JS (Dashboard UI)',
+      'SQLAlchemy', 'SQLite',
+      'python-binance', 'Binance REST & WebSockets',
+      'Pandas', 'NumPy', 'scikit-learn', 'Optuna',
+      'Jinja2', 'Vanilla JavaScript', 'Vanilla CSS',
+      'Telegram Bot API', 'Supabase Notifications',
+      'Pytest', 'Docker', 'GitHub Actions', 'Linux VPS',
     ],
     gallery: [
       { url: 'https://images.unsplash.com/photo-1642790551116-18e150f248e5?q=80&w=1470&auto=format&fit=crop', title: 'Real-time Trading Dashboard' },
@@ -393,7 +482,7 @@ const PROJECTS = [
   },
 
   // ─────────────────────────────────────────
-  // 9. BLANCO FLORAL — Flower Shop E-Commerce
+  // 11. BLANCO FLORAL — Flower Shop E-Commerce
   // ─────────────────────────────────────────
   {
     id: 'blanco-floral',
