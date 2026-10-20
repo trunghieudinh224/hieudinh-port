@@ -103,6 +103,7 @@
                                 <span id="btn-repo-label">GitHub Repo</span>
                             </a>
                         </div>
+                        <p id="access-note" class="hidden mt-4 text-sm text-slate-500" role="note"></p>
                     </div>
                     <div class="relative group animate-scale-in">
                         <div
@@ -153,7 +154,7 @@
                         <!-- Handled by JS if data exists -->
                     </div>
 
-                    <div class="animate-on-scroll">
+                    <div id="gallery-section" class="animate-on-scroll">
                         <h2 class="text-3xl font-bold text-slate-900 mb-8">Interface Gallery</h2>
                         <div id="gallery-container" class="space-y-8">
                             <!-- Handled by JS -->
@@ -234,6 +235,15 @@
             document.getElementById('proj-hero-img').src = p.image;
             document.getElementById('proj-hero-img').alt = p.title;
 
+            const accessNote = document.getElementById('access-note');
+            if (p.accessNote) {
+                accessNote.textContent = p.accessNote;
+                accessNote.classList.remove('hidden');
+            } else {
+                accessNote.classList.add('hidden');
+                accessNote.textContent = '';
+            }
+
             const btnLive = document.getElementById('btn-live');
             const btnRepo = document.getElementById('btn-repo');
             const btnRepoLabel = document.getElementById('btn-repo-label');
@@ -298,7 +308,10 @@
 
             // Gallery
             const gallery = document.getElementById('gallery-container');
+            const gallerySection = document.getElementById('gallery-section');
+            gallery.innerHTML = '';
             if (p.gallery && p.gallery.length > 0) {
+                gallerySection.classList.remove('hidden');
                 p.gallery.forEach(img => {
                     gallery.innerHTML += `
             <div class="group rounded-2xl overflow-hidden shadow-lg border border-slate-100">
@@ -308,7 +321,7 @@
           `;
                 });
             } else {
-                gallery.innerHTML = `<img src="${p.image}" class="w-full rounded-2xl shadow-xl border border-slate-100" />`;
+                gallerySection.classList.add('hidden');
             }
 
             // Tech list

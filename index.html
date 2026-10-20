@@ -457,7 +457,7 @@
 
             // Render Featured Projects
             const featuredContainer = document.getElementById('featured-projects');
-            const featured = PROJECTS.slice(0, 3);
+            const featured = PROJECTS.filter(project => project.featured);
             featured.forEach((p, index) => {
                 featuredContainer.innerHTML += window.renderProjectCard(p, index);
             });
