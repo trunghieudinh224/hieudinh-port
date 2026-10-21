@@ -97,13 +97,13 @@ document.addEventListener('DOMContentLoaded', () => {
       `<span class="skill-tag text-[11px] font-semibold px-2.5 py-1 rounded bg-slate-50 text-slate-600 border border-slate-100 cursor-default">${tag}</span>`
     ).join('');
     const liveAction = project.liveLink ? `
-                <a href="${project.liveLink}" target="_blank" class="p-2.5 rounded-lg border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-100 hover:bg-blue-50 transition-all duration-200" aria-label="Visit website">
+              <a href="${project.liveLink}" target="_blank" class="p-2.5 rounded-lg border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-100 hover:bg-blue-50 transition-all duration-200" aria-label="${window.portfolioText ? window.portfolioText('Visit website') : 'Visit website'}">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                   </svg>
                 </a>` : '';
     const repoAction = project.repoLink ? `
-                <a href="${project.repoLink}" target="_blank" class="p-2.5 rounded-lg border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-100 hover:bg-blue-50 transition-all duration-200" aria-label="View GitHub repo">
+                <a href="${project.repoLink}" target="_blank" class="p-2.5 rounded-lg border border-slate-200 text-slate-400 hover:text-blue-600 hover:border-blue-100 hover:bg-blue-50 transition-all duration-200" aria-label="${window.portfolioText ? window.portfolioText('View GitHub repo') : 'View GitHub repo'}">
                   <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
                   </svg>
@@ -140,7 +140,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             <div class="flex items-center justify-between mt-auto">
               <a href="project-detail.html?id=${project.id}" class="flex-1 bg-blue-600 text-white text-center py-2.5 rounded-lg text-sm font-semibold hover:bg-blue-700 transition-all hover:shadow-lg hover:shadow-blue-200 mr-2">
-                View Detail
+                ${window.portfolioText ? window.portfolioText('View Detail') : 'View Detail'}
               </a>
               <div class="flex gap-2">
                 ${liveAction}
@@ -230,12 +230,20 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!link) return;
       
       const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('tel:')) return;
       // Only intercept local HTML links that aren't anchors
-      if (href && href.endsWith('.html') && !href.startsWith('http') && link.target !== '_blank') {
+      let targetUrl;
+      try {
+        targetUrl = new URL(href, window.location.href);
+      } catch (_) {
+        return;
+      }
+
+      if (targetUrl.origin === window.location.origin && targetUrl.pathname.endsWith('.html') && link.target !== '_blank') {
         e.preventDefault();
         document.body.classList.add('page-fade-out');
         setTimeout(() => {
-          window.location.href = href;
+          window.location.href = targetUrl.href;
         }, 300); // Wait for transition duration
       }
     });

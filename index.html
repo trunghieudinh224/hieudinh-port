@@ -5,6 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Trung Hieu Dinh – Fullstack Web Developer & Sub-leader</title>
+    <meta name="description" content="Fullstack web developer and sub-leader building production web systems, business workflows, and digital experiences." />
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
 
     <!-- Tailwind CSS via CDN -->
@@ -48,6 +49,14 @@
                     <a href="contact.html"
                         class="bg-blue-600 text-white px-6 py-2.5 rounded-lg text-sm font-bold hover:bg-blue-700 transition-all shadow-sm hover:shadow-md hover:-translate-y-0.5 ml-2">Contact</a>
                 </div>
+
+                <label class="flex items-center gap-1.5 text-xs font-semibold text-slate-500">
+                    <span class="sr-only">Language</span>
+                    <select data-language-select aria-label="Language" class="bg-white border border-slate-200 rounded-lg px-2.5 py-2 text-xs font-bold text-slate-600 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="en" aria-label="English">🇺🇸</option>
+                        <option value="ja" aria-label="日本語">🇯🇵</option>
+                    </select>
+                </label>
 
                 <!-- Mobile Hamburger -->
                 <button id="hamburger-btn" class="md:hidden p-2 text-slate-600 hover:text-blue-600 transition-colors"
@@ -345,6 +354,8 @@
     <!-- Scripts -->
     <script src="data/profile.js?v=3"></script>
     <script src="data/projects.js?v=3"></script>
+    <script src="data/locales.js?v=1"></script>
+    <script src="assets/js/i18n.js?v=1"></script>
     <script src="assets/js/main.js?v=3"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
