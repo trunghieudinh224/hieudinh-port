@@ -199,7 +199,7 @@ const PROJECTS = [
       { url: 'assets/images/projects/tinhhoa-event/client/solutions.png', title: 'Solutions Page' },
       { url: 'assets/images/projects/tinhhoa-event/client/contact.png', title: 'Contact Page' },
     ],
-    liveLink: 'https://tinhhoa.online',
+    liveLink: 'https://darkcyan-bee-965062.hostingersite.com/',
     repoLink: '',
   },
 
@@ -337,8 +337,7 @@ const PROJECTS = [
       { url: 'assets/images/projects/webapp-fabrico/client/b2b-ordering.png', title: 'Client B2B Ordering Page' },
       { url: 'assets/images/projects/webapp-fabrico/client/contact-us.png', title: 'Client Contact Page' },
     ],
-    accessNote: 'The old public domain has expired. A replacement URL will be added when provided.',
-    liveLink: '',
+    liveLink: 'https://yellow-seahorse-676284.hostingersite.com/',
     repoLink: '',
   },
 
@@ -526,7 +525,7 @@ const PROJECTS = [
       { url: 'assets/images/projects/blanco-floral/admin/category-product.png', title: 'Admin Product Categories' },
       { url: 'assets/images/projects/blanco-floral/admin/shop-information.png', title: 'Admin Shop Information' },
     ],
-    liveLink: 'https://blancofloral.shop/',
+    liveLink: 'https://darkslateblue-rail-724249.hostingersite.com/',
     repoLink: '',
   },
 ];
